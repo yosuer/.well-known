@@ -9,7 +9,7 @@ var index = (function () {
         $("#status").fadeOut(1000);
         $("#preloader").delay(500).fadeOut();
     }
-    
+
     /* RESIZE BACKGROUND IMAGES */
     function backgroundResize() {
         var windowH = $(window).height();
@@ -110,11 +110,19 @@ var index = (function () {
         parallaxPosition();
     }
 
+    function initScroll() {
+        $('#fullPage').fullpage({
+            anchors: ['primera', 'bienvenidos', 'destacados'],
+            verticalCentered: false
+        });
+    }
+
     function init() {
         $nav = $('#navbar');
         $header = $('#header-parallax');
         nav_height = $nav.find("nav").outerHeight();
         initMain();
+        initScroll();
     }
 
     return {
