@@ -1,4 +1,6 @@
-
+@import url(icons/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css);
+@import url(icons/fonts/pe-icon-7-stroke/css/helper.css);
+@import url(icons/font-awesome.min.css);
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
@@ -26,7 +28,7 @@ body {
 
 p {
     font-family: 'Open Sans', serif;
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 30px;
@@ -45,7 +47,7 @@ h2 {
     font-size: 40px;
     font-family: 'Open Sans',sans-serif;
     font-weight: 200;
-    letter-spacing: 12px;
+    letter-spacing: 10px;
     line-height: 1.250em;
     text-transform: uppercase;
 }
@@ -89,6 +91,7 @@ h1, h1 a, h3, h3 a {
 
 h2, h2 a, h4, h4 a, h5, h5 a {
     color: #353535;
+    margin-top: 0px;
 }
 
 h6, h6 a {
@@ -266,7 +269,16 @@ span {
     letter-spacing: 1px;
     text-transform: uppercase !important;
 }
-
+.hoverable:hover > .anim {
+    -moz-animation: anim-out 0.75s;
+    -webkit-animation: anim-out 0.75s;
+    animation: anim-out 0.75s;
+}
+.hoverable:hover > .anim:after {
+    -moz-animation: anim-out-pseudo 0.75s;
+    -webkit-animation: anim-out-pseudo 0.75s;
+    animation: anim-out-pseudo 0.75s;
+}
 
 
 /* Icon Scroll¨*/
@@ -280,8 +292,6 @@ span {
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-
-
 
 .icon-scroll img {
     position: absolute;
@@ -353,7 +363,7 @@ span {
 }
 
 /* Paralax inicial */
-#header-parallax {
+#header-parallax { 
     width: 100vw;
     background: #fff;
     overflow: hidden;
@@ -442,4 +452,122 @@ span {
 /* Margins */
 .mt-20 {
     margin-top: 20px;
+}
+
+/* LINEA */
+.heading-line-center {
+    text-align: center;
+    width: 150px;
+    border-bottom: 3px solid #ff4081;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* SHADOW */
+
+.shadow-box .shadow-btn {
+    border: 1px solid #e7e7e7;
+    background: #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.shadow-box .shadow-btn:hover {
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 18px 2px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-box .team-box {
+    border: 1px solid #e7e7e7;
+    background: #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.shadow-box .team-box:hover {
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px 2px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-box .team-box h5 {
+    text-align: center;
+    padding: 28px 0px 0px 0px;
+}
+
+.shadow-box .team-box h6 {
+    text-align: center;
+    margin: 12px 10px 0 5px;
+    padding-bottom: 25px;
+}
+
+.shadow-box .team-box img {
+    padding: 0;
+    width: 100%;
+}
+
+.shadow-box .team-box p {
+    text-align: center;
+    padding: 38px 40px 56px;
+    margin-right: 40px;
+    margin-left: 40px;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+@media (max-width: 992px) {
+    .shadow-box .team-box {
+        margin-bottom: 100px;
+    }
+    .shadow-box .team-box:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* PROPIOS */
+
+.iguana-title-section {
+    padding-top: 5%;
+    padding-bottom: 3%;
+    position: relative;
+}
+
+.iguana-icon {
+    font-size: 20px;
+}
+
+.iguana-bienvenidos {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: -5px;
+    margin-left: -5px; 
+}
+
+.iguana-bienvenidos-li {
+    margin-bottom: 30px;
+}
+.iguana-bienvenidos-space{
+    margin-bottom: 70px;
+}
+
+.iguana-destacados-cuadro{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.iguana-destacados-cuadro-btn{
+    margin-top: 10px;
 }
