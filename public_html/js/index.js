@@ -19,10 +19,11 @@ var index = (function () {
 
     function initScroll() {
         $('#fullPage').fullpage({
-            anchors: ['primera', 'bienvenidos', 'destacados'],
+            anchors: ['primera', 'bienvenidos', 'comofunciona', 'destacados'],
             verticalCentered: false,
             css3: false,
             menu: '#menu',
+            scrollOverflow: true
         });
     }
 
