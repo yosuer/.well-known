@@ -137,63 +137,13 @@
 
 
 /* Icon Scroll¨*/
-.icon-scroll {
-    position: absolute;
-    bottom: 0;
-    left: 48.6%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
 
-.icon-scroll img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-}
-
-.icon-scroll .icon-scroll-main {
-    height: 75px;
-    position: relative;
-    left: 50%;
-    bottom: 0;
-}
-
-.icon-scroll .icon-scroll-center {
-    border-right: 1px dashed rgba(255, 255, 255, 0.5);
-    width: 0px;
-    height: 75px;
-    position: relative;
-    left: 50%;
-    bottom: 0;
-}
-
-.icon-scroll .icon-scroll-center:after {
-    content: '';
-    background-color: rgba(255, 255, 255, 1);
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    display: inline-block;
-    vertical-align: middle;
-    position: absolute;
-    top: 0px;
-    left: -2px;
-}
-
-.icon-scroll-alt {
-    position: absolute;
-    bottom: 20px;
-    left: 48%;
+.newscroll{
+    margin-top: 13%;
+    margin-left: 3%;
 }
 
 .mouse {
-    position:absolute;
-    top:320px;
-    height:35px;
-    left:10px;
     display: block;
     text-align: center;
     z-index: 500;
@@ -259,8 +209,8 @@
     text-align: center;
     width: 150px;
     border-bottom: 3px solid #ff4081;
-    margin-bottom: 40px;
-    margin-top: 10px;
+    margin-bottom: 5%;
+    margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -275,6 +225,15 @@
     float: left;
 }
 
+.line-black-left {
+    width: 80%;
+    border: 1px #ccc solid;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5%;
+    float: left;
+}
+
 
 /* PROPIOS IGUANA */
 
@@ -284,7 +243,7 @@
 
 .iguana-title-section {
     padding-top: 1%;
-    padding-bottom: 1%;
+    padding-bottom: 0%;
     position: relative;
 }
 
@@ -321,34 +280,9 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    padding: 15% 0 0 0;
+    padding-top: 15%;
     background-size: cover;
     background-attachment: fixed;
-}
-
-.welcome-section {
-    padding: 5% 0 0 0;
-    position: relative;
-}
-
-.welcome-section p {
-    margin-bottom: 40px;
-    padding: 0 20px 0;
-}
-
-.welcome-section h5 {
-    margin-bottom: 20px;
-}
-
-.about-section {
-    padding: 150px 80px 100px;
-}
-
-
-.vertical-center {
-    display: table-cell;
-    vertical-align: middle;
-    float: none;
 }
 
 .mat-in {
@@ -356,20 +290,13 @@
     margin-bottom: 32px;
 }
 
-.no-padding {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
 .frame-img-light {
-    margin-top: 5px;
     background-image: url("../img/bg-pros.jpg");
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    display: table;
     width: 100%;
     height: auto;
     position: relative;
@@ -377,30 +304,9 @@
 
 .frame-img-light img {
     width: 100%;
-    height: auto;
-}
-
-.frame-img-gradient {
-    margin-top: 5px;
-    background-image: url("../img/bg-gradient.jpg");
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    display: table;
-    width: 100%;
-    height: auto;
-    position: relative;
-}
-
-.frame-img-gradient img {
-    width: 100%;
-    height: auto;
 }
 
 /* MENU */
-
 #menu li {
     display:inline-block;
     margin: 10px;
@@ -459,7 +365,7 @@
 
 /* Animation Page */
 .title-left h5 {
-    font-size: 23px;
+    font-size: 27px;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: none;
@@ -488,15 +394,10 @@
 }
 
 .title-left span {
-    font-size: 18px;
     font-family: 'Open Sans', serif;
     font-style: italic;
     font-weight: 400;
     text-transform: none;
-}
-
-.title-left-wrapper {
-    padding: 40px;
 }
 
 .anim-triangle {
@@ -622,33 +523,4 @@
     .services-section-page-bg h2, .services-section-page-bg .section-subtitle {
         text-align: center !important;
     }
-}
-
-.backtop {
-    background-color: transparent;
-    width: 80px;
-    height: 80px;
-    bottom: 5px;
-    right: 20px;
-    display: none;
-    position: fixed;
-    text-decoration: none;
-    z-index: 1000;
-}
-
-.backtop:hover {
-    opacity:1;
-}
-
-.backtop-border-line {
-    color: #777;
-    bottom: -5px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    text-transform: uppercase;
-    display: none;
-    position: fixed;
-    text-decoration: none;
-    z-index: 9998;
 }
