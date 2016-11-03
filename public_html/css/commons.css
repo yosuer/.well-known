@@ -13,8 +13,6 @@ body {
     background-color: #fff;
     color: #696969;
     font-family: 'Open Sans',sans-serif;
-    font-size: 14px;
-    font-weight: 700px;
     line-height: 23px;
     overflow-x: hidden !important;
     overflow-y: scroll;
@@ -61,7 +59,6 @@ h5 {
 
 h6 {
     font-family: 'Open Sans', serif;
-    font-size: 16px;
     font-style: italic;
     font-weight: 400;
     letter-spacing: 1px;

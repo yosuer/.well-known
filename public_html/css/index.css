@@ -86,7 +86,6 @@
 
 .call-action-rosa-btn, .call-action-rosa-btn:focus, .call-action-rosa-btn:active {
     font-family: "Open Sans",sans-serif;
-    font-size: 13px;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -139,13 +138,11 @@
 /* Icon Scroll¨*/
 
 .newscroll{
-    margin-top: 13%;
-    margin-left: 3%;
+    margin-top: 10%;
 }
 
 .mouse {
     display: block;
-    text-align: center;
     z-index: 500;
     -webkit-animation: vertical 3s ease infinite;
     animation: vertical 3s ease infinite;

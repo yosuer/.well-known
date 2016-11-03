@@ -22,7 +22,6 @@ var index = (function () {
             anchors: ['primera', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos'],
             verticalCentered: false,
             css3: true,
-            menu: '#menu',
             scrollOverflow: true,
             slidesNavigation: true,
             scrollingSpeed: 1000
