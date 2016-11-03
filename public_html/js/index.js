@@ -24,7 +24,8 @@ var index = (function () {
             css3: false,
             menu: '#menu',
             scrollOverflow: true,
-            slidesNavigation: true
+            slidesNavigation: true,
+            scrollingSpeed: 1000
         });
     }
 
