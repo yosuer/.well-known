@@ -132,11 +132,12 @@
 /* Icon Scroll¨*/
 
 .newscroll{
-    margin-top: 10%;
+    position: fixed;
+    bottom: 4%;
+    width: 97%;
 }
 
 .mouse {
-    display: block;
     z-index: 500;
     -webkit-animation: vertical 3s ease infinite;
     animation: vertical 3s ease infinite;
@@ -232,8 +233,6 @@
 }
 
 .iguana-title-section {
-    padding-top: 1%;
-    padding-bottom: 0%;
     position: relative;
 }
 
@@ -302,7 +301,7 @@
 
 .vertical-center {
     min-height: 100%;  /* Fallback for vh unit */
-    min-height: 60vh; /* You might also want to use
+    min-height: 100vh; /* You might also want to use
                           'height' property instead.
                           
                           Note that for percentage values of
