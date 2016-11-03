@@ -407,7 +407,6 @@ and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape){
     .col-xs-12.text-right, .col-xs-12.text-left {
         width: 50%;
-        text-align: center;
     }
 }
 
