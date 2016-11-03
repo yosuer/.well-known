@@ -30,8 +30,7 @@ p {
 h1 {
     font-family: 'Open Sans',sans-serif;
     color: #000000 !important;
-    letter-spacing: 15px;
-    line-height: 1.250em;
+    letter-spacing: 10px;
     text-transform: uppercase;
 }
 
@@ -52,9 +51,7 @@ h3 {
 
 h4 {
     color: #000000 !important;
-    font-weight: 400;
     letter-spacing: 5px;
-    line-height: 1.53846em;
     text-transform: uppercase;
     margin: 3% 0 3% 0;
 }
