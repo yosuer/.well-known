@@ -257,9 +257,6 @@
     margin-left: -5px; 
 }
 
-.iguana-bienvenidos-li {
-    margin-bottom: 30px;
-}
 .iguana-bienvenidos-space{
     margin-bottom: 12%;
 }
@@ -571,5 +568,11 @@
 
     .services-section-page-bg h2, .services-section-page-bg .section-subtitle {
         text-align: center !important;
+    }
+}
+
+@media (max-width: 480px){ 
+    .espaciado-inicial {
+        margin-bottom: 10%;
     }
 }

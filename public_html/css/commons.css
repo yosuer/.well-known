@@ -24,26 +24,23 @@ p {
     font-family: 'Open Sans', serif;
     font-style: normal;
     font-weight: 400;
-    line-height: 30px;
 }
 
 h1 {
     font-family: 'Open Sans',sans-serif;
     color: #000000 !important;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     text-transform: uppercase;
 }
 
 h2 {
     font-family: 'Open Sans',sans-serif;
     font-weight: 200;
-    letter-spacing: 10px;
-    line-height: 1.250em;
+    letter-spacing: 5px;
     text-transform: uppercase;
 }
 
 h3 {
-    font-size: 28px;
     font-weight: 600;
     letter-spacing: 12px;
     line-height: 1.28571em;
@@ -57,10 +54,8 @@ h4 {
 }
 
 h5 {
-    font-size: 18px;
     font-weight: 600;
     letter-spacing: 2px;
-    line-height: 1.44444em;
     text-transform: uppercase;
 }
 
@@ -79,7 +74,6 @@ h1, h1 a, h3, h3 a {
 
 h2, h2 a, h4, h4 a, h5, h5 a {
     color: #353535;
-    margin: 2% 0 3% 0;
 }
 
 h6, h6 a {
