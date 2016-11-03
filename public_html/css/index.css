@@ -191,6 +191,7 @@
     top: 0px;
     z-index: 9999;
 }
+
 #status  {
     width: 200px;
     height: 200px;
@@ -286,7 +287,6 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    padding-top: 15%;
     background-size: cover;
     background-attachment: fixed;
 }

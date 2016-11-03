@@ -21,7 +21,7 @@ var index = (function () {
         $('#fullPage').fullpage({
             anchors: ['primera', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos'],
             verticalCentered: false,
-            css3: false,
+            css3: true,
             menu: '#menu',
             scrollOverflow: true,
             slidesNavigation: true,
