@@ -113,7 +113,6 @@ ul {
 }
 
 ul li {
-    margin: 0;
     line-height: 30px;
     position: relative;
 }
@@ -142,7 +141,6 @@ input {
     border: none;
     border-bottom: 1px solid #ff4081;
     display: block;
-    font-size: 16px;
     padding: 8px 0px;
     -webkit-transition: 0.2s border-bottom;
     transition: 0.2s border-bottom;
@@ -161,7 +159,6 @@ input:focus {
 /*Labels*/
 label {
     color: #ff4081;
-    font-size: 16px;
     pointer-events: none;
     position: absolute;
     top: 10px;
@@ -171,7 +168,6 @@ label {
 
 input:focus ~ label, input:valid ~ label {
     color: #ff4081;
-    font-size: 12px;
     top: -16px;
 }
 
