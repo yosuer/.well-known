@@ -23,7 +23,8 @@ var index = (function () {
             verticalCentered: false,
             css3: false,
             menu: '#menu',
-            scrollOverflow: true
+            scrollOverflow: true,
+            slidesNavigation: true
         });
     }
 
