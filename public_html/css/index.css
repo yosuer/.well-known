@@ -99,6 +99,7 @@
     transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
     position: relative;
     font-weight: 100;
+    margin-top: 4%;
     padding: 0.7em 1.25em;
     text-align: center;
     overflow: hidden;
@@ -221,8 +222,8 @@
 .line-black-left {
     width: 75%;
     border: 1px #ccc solid;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 
@@ -264,11 +265,6 @@
     margin-bottom: 10px;
 }
 
-.iguana-phone{
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
 #section0{
     background-image: url(../img/bg-header.jpg);
     background-repeat: no-repeat;
@@ -300,8 +296,7 @@
 }
 
 .vertical-center {
-    min-height: 100%;  /* Fallback for vh unit */
-    min-height: 100vh; /* You might also want to use
+    min-height: 70vh; /* You might also want to use
                           'height' property instead.
                           
                           Note that for percentage values of
@@ -393,20 +388,19 @@
 
 /* Center buttons home */
 
-@media (max-width: 768px) {
+@media (max-width: 736px) 
+and (orientation: portrait){
     .col-xs-12.text-right, .col-xs-12.text-left {
         text-align: center;
     }
 }
 
-@media screen 
-and (min-device-width: 320px) 
-and (max-device-width: 732px)
-and (-webkit-min-device-pixel-ratio: 2)
+@media (min-width: 350px) 
 and (orientation: landscape){
-    .col-xs-12.text-right, .col-xs-12.text-left {
+    .col-xs-12.text-right, .col-xs-12.text-left, .col-xs-12.shadow-box{
         width: 50%;
     }
+  
 }
 
 /* Animation Page */
@@ -495,7 +489,6 @@ and (orientation: landscape){
 }
 
 @media (max-width: 480px) {
-
     .anim-triangle, .anim-shape, .anim-square, .anim-triangle-2 {
         display: none !important;
     }
