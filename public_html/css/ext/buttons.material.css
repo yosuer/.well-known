@@ -185,6 +185,8 @@
 }
 
 .shadow-box .team-box {
+    margin-bottom: 5%;
+    margin-top: 5%;
     border: 1px solid #e7e7e7;
     background: #fff;
     -webkit-transition: all 0.3s;

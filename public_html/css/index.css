@@ -19,7 +19,6 @@
 
 .call-action-line-rosa-btn, .call-action-line-rosa-btn:focus, .call-action-line-rosa-btn:active {
     font-family: "Open Sans",sans-serif;
-    font-size: 15px;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -43,6 +42,7 @@
     position: relative;
     z-index: 0;
     cursor: pointer;
+    margin-bottom: 2%;
 }
 
 .call-action-line-rosa-btn:hover {
@@ -233,32 +233,10 @@
     margin-bottom: 20%;
 }
 
-.iguana-title-section {
-    position: relative;
-}
+
 
 .iguana-icon {
     font-size: 20px;
-}
-
-.iguana-bienvenidos {
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-right: -5px;
-    margin-left: -5px; 
-}
-
-.iguana-bienvenidos-space{
-    margin-bottom: 12%;
-}
-
-.iguana-destacados-cuadro{
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-.iguana-destacados-cuadro-btn{
-    margin-bottom: 10px;
 }
 
 #section0{
@@ -425,12 +403,66 @@
     font-size: 1.5em;
 }
 
-/* Center buttons home */
 
-@media (max-width: 736px) 
-and (orientation: portrait){
-    .col-xs-12.text-right, .col-xs-12.text-left {
+
+/* RESPONSIVE
+========================================================================= */
+
+.iguana-home-btn-auto, .iguana-home-btn-hogar{
+    text-align: center;
+}
+
+.iguana-title-section {
+    position: relative;
+}
+
+
+/* Móviles en horizontal o tablets en vertical
+------------------------------------------------------------------------- */
+@media (min-width: 480px) 
+and (max-width: 1023px){ 
+    .iguana-home-btn-auto{
+        width: 50%;
+        text-align: right;
+    }
+    .iguana-home-btn-hogar{
+        width: 50%;
+        text-align: left;
+    }
+    .iguana-destacados-cuadro{
+        width: 50%;
+    }
+    .iguana-title-section {
+        
+    }
+}
+
+/* Tablets en horizonal y escritorios normales
+------------------------------------------------------------------------- */
+@media (min-width: 1024px) { 
+    .iguana-home-btn-auto{
+        width: 50%;
+        text-align: right;
+    }
+    .iguana-home-btn-hogar{
+        width: 50%;
+        text-align: left;
+    }
+
+}
+
+/* Escritorios muy anchos
+------------------------------------------------------------------------- */
+@media (min-width: 1200px) { }
+
+
+/* Center buttons home 
+@media only screen 
+and (min-width : 321px) {
+
+    .col-xs-10 .col-xs-offset-1{
         text-align: center;
+        width: 50%;
     }
 }
 
@@ -441,6 +473,7 @@ and (orientation: landscape){
     }
 
 }
+*/
 
 /* Animation Page */
 .title-left h5 {
