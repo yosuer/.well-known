@@ -23,6 +23,7 @@ var index = (function () {
             menu: '#menu',
             verticalCentered: false,
             css3: true,
+            responsiveWidth: 320,
             scrollOverflow: true,
             slidesNavigation: true,
             scrollingSpeed: 1000
