@@ -21,7 +21,6 @@ var index = (function () {
             anchors: ['primera', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos'],
             verticalCentered: false,
             css3: true,
-            normalScrollElements: '#section3',
             responsiveWidth: 320,
             scrollOverflow: true,
             slidesNavigation: true,
