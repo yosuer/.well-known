@@ -252,10 +252,6 @@
     margin-bottom: 12%;
 }
 
-.iguana-comofunciona-space{
-    margin-bottom: 23%;
-}
-
 .iguana-destacados-cuadro{
     margin-top: 10px;
     margin-bottom: 30px;
@@ -274,19 +270,48 @@
     background-attachment: fixed;
 }
 
-.iguana-telefono{
-    background-image: url(../img/telefono.gif);
-    background-position: inherit;
-    background-size: cover;
-    background-repeat: no-repeat;
-    top: auto;
-    z-index: initial;
+@media all and (min-width: 620px){
+    .iguana-telefono{
+        background-image: url(../img/telefono.gif);
+        position: fixed;
+        background-position: inherit;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 5%;
+        z-index: 0;
+        right: 15%;
+        width: 35%;
+    }
+    #iguana-telefono-contenido{
+        margin: auto;
+        width: 87%;
+        padding-top: 24%;
+    }
 }
-#iguana-telefono-contenido{
-    margin: auto;
-    width: 87%;
-    padding-top: 24%;
+/*screen resolutions lower than 620px*/
+@media all and (max-width: 620px){
+    .iguana-telefono{
+        background-image: url(../img/telefono.gif);
+        position: fixed;
+        background-position: inherit;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 5%;
+        z-index: 0;
+        right: 15%;
+        width: 70%;
+    }
+    #iguana-telefono-contenido{
+        margin: auto;
+        width: 87%;
+        padding-top: 24%;
+    }
+    .iguana-comofunciona-space{
+        margin-bottom: 1%;
+    }
 }
+
+
 
 .mat-in {
     position: relative;
