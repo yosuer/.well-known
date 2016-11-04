@@ -21,12 +21,13 @@ var index = (function () {
         $('#fullPage').fullpage({
             anchors: ['primera', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos'],
             menu: '#menu',
-            verticalCentered: false,
+            verticalCentered: true,
             css3: true,
+            normalScrollElements: '#section3',
             responsiveWidth: 320,
             scrollOverflow: true,
             slidesNavigation: true,
-            scrollingSpeed: 1000
+            scrollingSpeed: 800
         });
     }
 
