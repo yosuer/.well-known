@@ -274,6 +274,20 @@
     background-attachment: fixed;
 }
 
+.iguana-telefono{
+    background-image: url(../img/telefono.gif);
+    background-position: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: auto;
+    z-index: initial;
+}
+#iguana-telefono-contenido{
+    margin: auto;
+    width: 87%;
+    padding-top: 24%;
+}
+
 .mat-in {
     position: relative;
     margin-bottom: 32px;
@@ -400,7 +414,7 @@ and (orientation: landscape){
     .col-xs-12.text-right, .col-xs-12.text-left, .col-xs-12.shadow-box{
         width: 50%;
     }
-  
+
 }
 
 /* Animation Page */
