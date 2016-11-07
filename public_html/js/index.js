@@ -7,9 +7,32 @@ var index = (function () {
         responsiveWidth: 320,
         scrollOverflow: true,
         slidesNavigation: true,
-        scrollingSpeed: 700,
+        scrollingSpeed: 800,
+        recordHistory: false,
         afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
-            $("#iguana-telefono-contenido").attr("src", "img/paso" + slideIndex + ".gif");
+            console.log('anchorLink: ' + anchorLink + ', index: ' + index +
+                    ', slideAnchor: ' + slideAnchor + ', slideIndex: ' + slideIndex);
+        },
+        onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
+            $(".iguana-telefono-contenido").fadeOut(300, function () {
+                $(".iguana-telefono-contenido").attr("src", "img/paso" + nextSlideIndex + ".gif");
+                $(".iguana-telefono-contenido").fadeIn(200);
+            });
+            console.log('anchorLink: ' + anchorLink + ', index: ' + index + ', slideIndex: ' + slideIndex +
+                    ', direction: ' + direction + ', nextSlideIndex: ' + nextSlideIndex);
+        },
+        onLeave: function (index, nextIndex, direction) {
+            if (index === 1 && nextIndex === 2) {
+                $('#section0 .wow').css('opacity', 0.7);
+                console.log(index + '  ' + nextIndex + '  ' + direction);
+            }
+            if (index === 2 && nextIndex === 1) {
+                $('#section0 .wow').css('opacity', 1);
+                console.log(index + '  ' + nextIndex + '  ' + direction);
+            }
+        },
+        afterRender: function () {
+            console.log('after render');
         }
     };
 
@@ -30,6 +53,12 @@ var index = (function () {
     function init() {
         initMain();
         initScroll();
+
+        $('.iguana-home-btn-auto').on('click', function (e) {
+            console.log('saddsadsada ' + configFullPage.scrollingSpeed);
+            configFullPage.scrollingSpeed = 4000;
+            console.log('saddsadsada ' + configFullPage.scrollingSpeed);
+        });
     }
 
     return {
