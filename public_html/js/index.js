@@ -15,8 +15,6 @@ var index = (function () {
         }
     }
 
-
-
     function initMain() {
         $(window).on("load", function () {
             $("#status").fadeOut(1000);
@@ -47,11 +45,13 @@ var index = (function () {
             onLeave: function (index, nextIndex, direction) {
                 if (index === 1 && nextIndex === 2) {
                     $('#section0 .wow').css('opacity', 0.7);
-                    console.log(index + '  ' + nextIndex + '  ' + direction);
+                    $('#header').css('background', '#ff4081');
+                    $('#header').css('opacity', '0.2');
                 }
                 if (index === 2 && nextIndex === 1) {
                     $('#section0 .wow').css('opacity', 1);
-                    console.log(index + '  ' + nextIndex + '  ' + direction);
+                    $('#header').css('background', 'transparent');
+                    $('#header').css('opacity', '1');
                 }
             },
             afterRender: function () {
