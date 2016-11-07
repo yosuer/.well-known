@@ -1,6 +1,6 @@
 .nav-fillpath a {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 }
 
 .nav-fillpath .icon-wrap {
@@ -129,14 +129,29 @@ nav a {
 }
 
 nav a.prev {
-    left: -13%;
+    left: -5%;
 }
 
 nav a.next {
-    right: -13%;
+    right: -5%;
 }
 
-@media (min-width: 480px){
+@media (min-width: 375px)
+and (max-width: 768px){
+    nav a.prev {
+        left: -9%;
+    }
+
+    nav a.next {
+        right: -9%;
+    }
+    .nav-fillpath a {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (min-width: 768px) { 
     nav a.prev {
         left: 0;
     }
@@ -144,4 +159,10 @@ nav a.next {
     nav a.next {
         right: 0;
     }
+
+    .nav-fillpath a {
+        width: 100px;
+        height: 100px;
+    }
+
 }
