@@ -28,6 +28,7 @@ var index = (function () {
         var configFullPage = {
             anchors: ['primera', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos'],
             verticalCentered: true,
+            menu: '.header',
             css3: isMobile(),
             responsiveWidth: 320,
             scrollOverflow: true,
