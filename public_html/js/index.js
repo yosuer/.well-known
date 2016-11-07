@@ -9,10 +9,6 @@ var index = (function () {
         slidesNavigation: true,
         scrollingSpeed: 800,
         recordHistory: false,
-        afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
-            console.log('anchorLink: ' + anchorLink + ', index: ' + index +
-                    ', slideAnchor: ' + slideAnchor + ', slideIndex: ' + slideIndex);
-        },
         onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
             $(".iguana-telefono-contenido").fadeOut(300, function () {
                 $(".iguana-telefono-contenido").attr("src", "img/paso" + nextSlideIndex + ".gif");
@@ -33,16 +29,23 @@ var index = (function () {
         },
         afterRender: function () {
             console.log('after render');
+
+            $('.nav-fillpath .next').on('click', function (e) {
+                e.preventDefault();
+                $.fn.fullpage.moveSlideRight();
+            });
+            $('.nav-fillpath .prev').on('click', function (e) {
+                e.preventDefault();
+                $.fn.fullpage.moveSlideLeft();
+            });
         }
     };
 
-    function loadPreloader() {
-        $("#status").fadeOut(1000);
-        $("#preloader").delay(500).fadeOut();
-    }
-
     function initMain() {
-        $(window).on("load", loadPreloader);
+        $(window).on("load", function () {
+            $("#status").fadeOut(1000);
+            $("#preloader").delay(500).fadeOut();
+        });
         new WOW().init();
     }
 
@@ -53,12 +56,6 @@ var index = (function () {
     function init() {
         initMain();
         initScroll();
-
-        $('.iguana-home-btn-auto').on('click', function (e) {
-            console.log('saddsadsada ' + configFullPage.scrollingSpeed);
-            configFullPage.scrollingSpeed = 4000;
-            console.log('saddsadsada ' + configFullPage.scrollingSpeed);
-        });
     }
 
     return {
