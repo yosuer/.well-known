@@ -67,6 +67,7 @@ var index = (function () {
         };
 
         $('#fullPage').fullpage(configFullPage);
+        window.scrollTo(0, 1);
     }
 
     function init() {
