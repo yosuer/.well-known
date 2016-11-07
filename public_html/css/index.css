@@ -153,35 +153,6 @@
     opacity: .2;
 }
 
-/* LINEA */
-.heading-line-center {
-    text-align: center;
-    width: 150px;
-    border-bottom: 3px solid #ff4081;
-    margin-bottom: 4%;
-    margin-top: 5px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.heading-line-blue-left {
-    width: 140px;
-    border-bottom: 2px solid #ff4081;
-    margin-top: 22px;
-    margin-right: 33px;
-    margin-left: -12%;
-    float: left;
-}
-
-.line-black-left {
-    width: 75%;
-    border: 1px #ccc solid;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-
 /* PROPIOS IGUANA */
 
 .iguana-inicio-space{
@@ -206,14 +177,11 @@
 @media all and (min-width: 620px){
     .iguana-telefono{
         background-image: url(../img/telefono.gif);
-        position: fixed;
+        position: relative;
         background-position: inherit;
         background-size: cover;
         background-repeat: no-repeat;
-        margin-top: 5%;
         z-index: 0;
-        right: 15%;
-        width: 35%;
     }
     #iguana-telefono-contenido{
         margin: auto;
@@ -225,22 +193,16 @@
 @media all and (max-width: 620px){
     .iguana-telefono{
         background-image: url(../img/telefono.gif);
-        position: fixed;
+        position: relative;
         background-position: inherit;
         background-size: cover;
         background-repeat: no-repeat;
-        margin-top: 5%;
         z-index: 0;
-        right: 15%;
-        width: 70%;
     }
     #iguana-telefono-contenido{
         margin: auto;
         width: 87%;
         padding-top: 24%;
-    }
-    .iguana-comofunciona-space{
-        margin-bottom: 1%;
     }
 }
 
@@ -359,11 +321,38 @@
 
 
 
-/* RESPONSIVE
-========================================================================= */
+/*================================================= 
+            RESPONSIVE 
+======================== */
+
+/* LINEAS */
+.heading-line-center {
+    text-align: center;
+    width: 150px;
+    border-bottom: 3px solid #ff4081;
+    margin-bottom: 13%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading-line-blue-left {
+    width: 140px;
+    border-bottom: 2px solid #ff4081;
+    margin-top: 22px;
+    margin-right: 33px;
+    margin-left: -12%;
+    float: left;
+}
+
+.line-black-left {
+    width: 75%;
+    border: 1px #ccc solid;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 
 /* Icon Scroll¨*/
-
 .mouse {
     position: absolute;
     bottom: 5%;
@@ -406,10 +395,9 @@
     text-align: center;
 }
 
-.iguana-title-section {
-    position: relative;
+.iguana-como-funciona-container{
+    margin-bottom: 10%;
 }
-
 
 /* Móviles en horizontal o tablets en vertical
 ------------------------------------------------------------------------- */
@@ -425,9 +413,6 @@ and (max-width: 1023px){
     }
     .iguana-destacados-cuadro{
         width: 50%;
-    }
-    .iguana-title-section {
-
     }
 }
 
@@ -447,7 +432,12 @@ and (max-width: 1023px){
 
 /* Escritorios muy anchos
 ------------------------------------------------------------------------- */
-@media (min-width: 1200px) { }
+@media (min-width: 1200px) { 
+
+    .heading-line-center{
+        margin-bottom: 5%;
+    }
+}
 
 /* Animation Page */
 .title-left h5 {
