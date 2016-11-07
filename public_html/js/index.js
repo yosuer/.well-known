@@ -20,7 +20,7 @@ var index = (function () {
         $('#fullPage').fullpage({
             anchors: ['primera', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos'],
             verticalCentered: true,
-            css3: true,
+            css3: false,
             responsiveWidth: 320,
             scrollOverflow: true,
             slidesNavigation: true,
