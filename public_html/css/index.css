@@ -340,6 +340,7 @@
 /* Navigation Styles */
 .nav-primary { 
     position: absolute;
+    top: 5%;
 }
 
 ul.main-nav {
@@ -467,9 +468,6 @@ ul.main-nav > li ul.sub-menu-lists > li > a {
     .ic.close:focus { opacity: 0; }
     */
     .ic.menu:focus { opacity: 1;  }
-
-
-    nav { background-color: transparent; }
 
     /* Main Menu for Handheld Devices  */
     ul.main-nav {
