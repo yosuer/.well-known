@@ -30,6 +30,7 @@ var index = (function () {
             verticalCentered: true,
             menu: '.header',
             css3: isMobile(),
+            autoScrolling: !isMobile(),
             responsiveWidth: 0,
             responsiveHeight: 0,
             scrollOverflow: true,
