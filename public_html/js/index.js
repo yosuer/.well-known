@@ -28,7 +28,6 @@ var index = (function () {
         var configFullPage = {
             anchors: ['primera', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos'],
             verticalCentered: true,
-            menu: '.navbar-primary',
             css3: isMobile(),
             autoScrolling: true,
             responsiveWidth: 0,
@@ -39,7 +38,6 @@ var index = (function () {
             touchSensitivity: 15,
             scrollingSpeed: 800,
             recordHistory: false,
-            fixedElements: '#header',
             onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
                 $(".iguana-telefono-contenido").fadeOut(300, function () {
                     $(".iguana-telefono-contenido").attr("src", "img/paso" + nextSlideIndex + ".gif");
@@ -73,11 +71,16 @@ var index = (function () {
         };
 
         $('#fullPage').fullpage(configFullPage);
-        
+
         window.addEventListener("load", function () {
             setTimeout(function () {
                 window.scrollTo(0, 1);
             }, 0);
+        });
+
+        $("#toggle").click(function () {
+            $(this).toggleClass("on");
+            $("#menu").slideToggle();
         });
     }
 

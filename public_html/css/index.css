@@ -153,13 +153,11 @@
     opacity: .2;
 }
 
-/* PROPIOS IGUANA */
 
+/* PROPIOS IGUANA */
 .iguana-inicio-space{
     margin-bottom: 20%;
 }
-
-
 
 .iguana-icon {
     font-size: 20px;
@@ -169,7 +167,6 @@
     background-image: url(../img/bg-header.jpg);
     background-repeat: no-repeat;
     background-position: center;
-
     background-size: cover;
     background-attachment: fixed;
 }
@@ -234,58 +231,6 @@
     -webkit-justify-content : center;
     justify-content : center;
 }
-
-/* MENU */
-#menu li {
-    display:inline-block;
-    margin: 10px;
-    color: #000;
-    background:#fff;
-    background: rgba(255,255,255, 0.5);
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-}
-#menu li.active{
-    background:#666;
-    background: rgba(0,0,0, 0.5);
-    color: #fff;
-}
-#menu li a{
-    text-decoration:none;
-    color: #000;
-}
-#menu li.active a:hover{
-    color: #000;
-}
-#menu li:hover{
-    background: rgba(255,255,255, 0.8);
-}
-#menu li a,
-#menu li.active a{
-    padding: 9px 18px;
-    display:block;
-}
-#menu li.active a{
-    color: #fff;
-}
-#menu{
-    position:fixed;
-    top:0;
-    left:0;
-    height: 40px;
-    z-index: 70;
-    width: 100%;
-    padding: 0;
-    margin:0;
-}
-
-.intro p{
-    width: 50%;
-    margin: 0 auto;
-    font-size: 1.5em;
-}
-
-
 
 /*================================================= 
             RESPONSIVE 
@@ -388,16 +333,202 @@
     margin-top: 85%;
 }
 
-.navbar-primary{
-    top: 0px;
-    position: fixed;
-    display: block;
-    background: transparent;
-    opacity: 1;
-    z-index: 9;
-    color: #f2f2f2;
+/*
+   MENU
+*/
+
+/* Navigation Styles */
+.nav-primary { 
+    position: absolute;
 }
 
+ul.main-nav {
+    list-style-type: none; 
+    font-size: 0px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+ul.main-nav > li { 
+    display: inline-block;
+    padding: 0; 
+}
+
+ul.main-nav > li > a { 
+    display: block; 
+    padding: 20px 30px; 
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+ul.main-nav > li:hover { background-color: #f9f9f9; }
+ul.main-nav > li:hover > a { color: #333; font-weight: 400; }
+
+ul.main-nav > li ul.sub-menu-lists {
+    margin: 0px;
+    padding: 0px;
+    list-style-type : none;
+    display:block;
+}
+
+ul.main-nav > li ul.sub-menu-lists > li {
+    padding: 2px 0;
+}
+
+ul.main-nav > li ul.sub-menu-lists > li > a {
+    font-size: 14px;
+}
+
+.ic {
+    position: fixed; 
+    cursor: pointer;
+    display: inline-block;
+    right: 25px;
+    width: 32px;
+    height: 24px;
+    text-align: center;
+    top:0px;
+    outline: none;
+}
+
+.ic.close { 
+    opacity: 0; 
+    font-size: 0px; 
+    font-weight: 300; 
+    color: #fff;
+    top:8px;
+    height:40px;
+    display: block;
+    outline: none;
+}
+
+/* Menu Icons for Devices*/
+.ic.menu { top:25px; z-index : 20; }
+
+.ic.menu .line { 
+    height: 4px; 
+    width: 100%; 
+    display: block; 
+    margin-bottom: 6px; 
+}
+.ic.menu .line-last-child { margin-bottom: 0px;  }
+
+.sub-menu-head { margin: 10px 0; }
+.banners-area { margin-top: 20px; padding-top: 15px; }
+
+
+@media only screen and (max-width:768px) {
+    .sub-menu-head { color:orange; }
+    .ic.menu { display: block; }
+    header .ic.menu .line { background-color: #000; }
+    .ic.menu .line {
+        -webkit-transition: all 0.4s ease 0s;
+        -o-transition: all 0.4s ease 0s;
+        transition: all 0.4s ease 0s;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+        transform-origin: center center;
+    }
+    .ic.menu:focus .line { background-color: #fff !important; }
+
+    .ic.menu:focus .line:nth-child(1) { 
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg); 
+    }
+
+    .ic.menu:focus .line:nth-child(2) { 
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg); 
+        margin-top: -10px;
+    }
+
+    .ic.menu:focus .line:nth-child(3) {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+
+    .ic.menu:focus{ outline: none; }
+    .ic.menu:focus ~ .ic.close { opacity: 1; z-index : 21;  outline: none;  }
+
+    /*
+    
+    .ic.menu:focus ~ .ic.close { opacity: 1.0; z-index : 21;  }
+    .ic.close:focus { opacity: 0; }
+    */
+    .ic.menu:focus { opacity: 1;  }
+
+
+    nav { background-color: transparent; }
+
+    /* Main Menu for Handheld Devices  */
+    ul.main-nav {
+        z-index:2; 
+        padding: 50px 0;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        width: 0px;
+        height: 100%;
+        overflow: auto;
+        /*CSS animation applied : Slide from Right*/
+        -webkit-transition-property: background, width;
+        -moz-transition-property: background, width;
+        -o-transition-property: background, width;
+        transition-property: background, width;
+        -webkit-transition-duration: 0.6s;
+        -moz-transition-duration: 0.6s;
+        -o-transition-duration: 0.6s;
+        transition-duration: 0.6s;
+    }
+
+    .ic.menu:focus ~ .main-nav { width: 300px; background-color:rgba(0,0,0,1); }
+
+    ul.main-nav > * { 
+        -webkit-transition-property: opacity;
+        -moz-transition-property: opacity;
+        -o-transition-property: opacity;
+        transition-property: opacity;
+        -webkit-transition-duration: 0.4s;
+        -moz-transition-duration: 0.4s;
+        -o-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        opacity: 0;
+    }
+    .ic.menu:focus ~ .main-nav > * {opacity: 1;}
+
+    ul.main-nav > li > a:after {display: none;}
+    ul.main-nav > li:first-child { border-radius: 0px; }
+    ul.main-nav > li {
+        display: block;
+        border-bottom: 1px solid #444;
+    }
+
+    ul.main-nav > li > a { font-weight: 600; }
+
+    ul.main-nav > li ul.sub-menu-lists > li a { color: #eee; font-size: 14px; }
+    .sub-menu-head { font-size: 16px;}
+    ul.main-nav > li:hover { background-color: transparent;  }
+    ul.main-nav > li:hover > a {color: #fff; text-decoration: none; font-weight: 600;}
+    .ic.menu:focus ~ ul.main-nav > li > div.sub-menu-block {
+        border-left: 0px solid #ccc;
+        border-right: 0px solid #ccc;
+        border-bottom: 0px solid #ccc;
+        position: relative;
+        visibility: visible;
+        opacity: 1.0;
+    }
+}
 
 /* Móviles en horizontal o tablets en vertical
 ------------------------------------------------------------------------- */
