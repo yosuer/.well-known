@@ -388,7 +388,7 @@
     margin-top: 85%;
 }
 
-#header{
+.navbar-primary{
     top: 0px;
     position: fixed;
     display: block;
@@ -397,6 +397,7 @@
     z-index: 9;
     color: #f2f2f2;
 }
+
 
 /* Móviles en horizontal o tablets en vertical
 ------------------------------------------------------------------------- */
