@@ -30,11 +30,14 @@ var index = (function () {
             verticalCentered: true,
             menu: '.header',
             css3: isMobile(),
-            responsiveWidth: 320,
+            responsiveWidth: 0,
+            responsiveHeight: 0,
             scrollOverflow: true,
             slidesNavigation: true,
+            scrollBar: false,
             scrollingSpeed: 800,
             recordHistory: false,
+            fixedElements: '#header',
             onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
                 $(".iguana-telefono-contenido").fadeOut(300, function () {
                     $(".iguana-telefono-contenido").attr("src", "img/paso" + nextSlideIndex + ".gif");
