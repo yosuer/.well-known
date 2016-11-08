@@ -47,6 +47,7 @@ var index = (function () {
                         ', direction: ' + direction + ', nextSlideIndex: ' + nextSlideIndex);
             },
             onLeave: function (index, nextIndex, direction) {
+                /*
                 if (index === 1 && nextIndex === 2) {
                     $('#section0 .wow').css('opacity', 0.7);
                     $('#header').css('background', '#ff4081');
@@ -56,7 +57,7 @@ var index = (function () {
                     $('#section0 .wow').css('opacity', 1);
                     $('#header').css('background', 'transparent');
                     $('#header').css('opacity', '1');
-                }
+                }*/
             },
             afterRender: function () {
                 $('.nav-fillpath .next').on('click', function (e) {

@@ -343,13 +343,6 @@
     top: 5%;
 }
 
-ul.main-nav {
-    list-style-type: none; 
-    font-size: 0px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
 ul.main-nav > li { 
     display: inline-block;
     padding: 0; 
@@ -357,12 +350,10 @@ ul.main-nav > li {
 
 ul.main-nav > li > a { 
     display: block; 
-    padding: 20px 30px; 
+    padding: 10px 15px;
     position: relative;
     color: #fff;
     font-size: 16px;
-    font-weight: 400;
-    box-sizing: border-box;
 }
 
 ul.main-nav > li:hover { background-color: #f9f9f9; }
@@ -417,9 +408,9 @@ ul.main-nav > li ul.sub-menu-lists > li > a {
 }
 .ic.menu .line-last-child { margin-bottom: 0px;  }
 
-.sub-menu-head { margin: 10px 0; }
-.banners-area { margin-top: 20px; padding-top: 15px; }
-
+main-nav .img-responsive{
+    width : 30%;
+}
 
 @media only screen and (max-width:768px) {
     .sub-menu-head { color:orange; }
@@ -462,11 +453,6 @@ ul.main-nav > li ul.sub-menu-lists > li > a {
     .ic.menu:focus{ outline: none; }
     .ic.menu:focus ~ .ic.close { opacity: 1; z-index : 21;  outline: none;  }
 
-    /*
-    
-    .ic.menu:focus ~ .ic.close { opacity: 1.0; z-index : 21;  }
-    .ic.close:focus { opacity: 0; }
-    */
     .ic.menu:focus { opacity: 1;  }
 
     /* Main Menu for Handheld Devices  */
