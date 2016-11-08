@@ -30,7 +30,7 @@ var index = (function () {
             verticalCentered: true,
             menu: '.navbar-primary',
             css3: isMobile(),
-            autoScrolling: false,
+            autoScrolling: true,
             responsiveWidth: 0,
             responsiveHeight: 0,
             scrollOverflow: true,
@@ -73,7 +73,12 @@ var index = (function () {
         };
 
         $('#fullPage').fullpage(configFullPage);
-        window.scrollTo(0, 1);
+        
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                window.scrollTo(0, 1);
+            }, 0);
+        });
     }
 
     function init() {
