@@ -17,8 +17,9 @@ var index = (function () {
 
     function initMain() {
         $(window).on("load", function () {
-            $("#status").fadeOut(1000);
-            $("#preloader").delay(500).fadeOut();
+            $('#status').fadeOut(); // will first fade out the loading animation 
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+            $('body').delay(350).css({'overflow': 'visible'});
         });
         new WOW().init();
     }
@@ -47,7 +48,6 @@ var index = (function () {
                         ', direction: ' + direction + ', nextSlideIndex: ' + nextSlideIndex);
             },
             onLeave: function (index, nextIndex, direction) {
-                /*
                 if (index === 1 && nextIndex === 2) {
                     $('#section0 .wow').css('opacity', 0.7);
                     $('#header').css('background', '#ff4081');
@@ -57,7 +57,7 @@ var index = (function () {
                     $('#section0 .wow').css('opacity', 1);
                     $('#header').css('background', 'transparent');
                     $('#header').css('opacity', '1');
-                }*/
+                }
             },
             afterRender: function () {
                 $('.nav-fillpath .next').on('click', function (e) {
@@ -79,10 +79,7 @@ var index = (function () {
             }, 0);
         });
 
-        $("#toggle").click(function () {
-            $(this).toggleClass("on");
-            $("#menu").slideToggle();
-        });
+        
     }
 
     function init() {
