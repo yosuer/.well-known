@@ -711,7 +711,7 @@ FIN COMMONS
 /* Icon Scroll¨*/
 .mouse {
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     right: 49%;
     z-index: 500;
     -webkit-animation: vertical 3s ease infinite;
@@ -786,8 +786,13 @@ FIN COMMONS
 /* Navigation Styles */
 
 .nav-primary {
-    position: absolute;
-    top: 5%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 70;
+    width: 100%;
+    padding: 0;
+    margin:0;
 }
 
 .main-nav > li {
