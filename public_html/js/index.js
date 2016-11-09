@@ -15,11 +15,10 @@ var index = (function () {
         }
     }
 
-    function initMain() {
+    function initPreloader() {
         $(window).on("load", function () {
-            $('#status').fadeOut(); // will first fade out the loading animation 
-            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-            $('body').delay(350).css({'overflow': 'visible'});
+            $("#status").fadeOut();
+            $("#preloader").delay(350).fadeOut('slow');
         });
         new WOW().init();
     }
@@ -73,18 +72,10 @@ var index = (function () {
         };
 
         $('#fullPage').fullpage(configFullPage);
-
-        window.addEventListener("load", function () {
-            setTimeout(function () {
-                window.scrollTo(0, 1);
-            }, 0);
-        });
-
-        
     }
 
     function init() {
-        initMain();
+        initPreloader();
         initFullPage();
     }
 

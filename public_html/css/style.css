@@ -123,7 +123,7 @@ ul {
 }
 
 ul li {
-    line-height: 30px;
+    line-height: 40px;
     position: relative;
 }
 
@@ -783,16 +783,17 @@ FIN COMMONS
    MENU
 */
 
-/* Navigation Styles */
-
 .nav-primary {
     position: fixed;
-    top:0;
-    left:0;
     z-index: 70;
     width: 100%;
     padding: 0;
     margin:0;
+    top:2%;
+}
+
+.nav-primary .iguana-nav-izq{
+    display: none;
 }
 
 .main-nav > li {
@@ -800,7 +801,7 @@ FIN COMMONS
 }
 
 .main-nav > li > a {
-    display: block;
+    display: inline;
     padding-left: 20px;
     padding-top: 20px;
     position: relative;
@@ -830,9 +831,6 @@ FIN COMMONS
     display: block;
     outline: none;
 }
-
-
-/* Menu Icons for Devices*/
 
 .ic.menu {
     top: 25px;
@@ -913,7 +911,7 @@ FIN COMMONS
         right: 0px;
         top: 0px;
         width: 0px;
-        background-color: rgba(0, 0, 0, 1);
+        background-color: rgba(0, 0, 0, 0.7);
         height: 100%;
         overflow: auto;
         /*CSS animation applied : Slide from Right*/
@@ -927,8 +925,8 @@ FIN COMMONS
         transition-duration: 0.6s;
     }
     .ic.menu:focus ~ .main-nav {
-        width: 300px;
-        background-color: rgba(0, 0, 0, 1);
+        width: 40%;
+        background-color: rgba(0, 0, 0, 0.7);
     }
     ul.main-nav > * {
         -webkit-transition-property: opacity;
@@ -956,6 +954,36 @@ FIN COMMONS
 
 }
 
+/* Móviles en horizontal o tablets en vertical
+  ------------------------------------------------------------------------- */
+@media (min-width: 480px) 
+and (max-width: 1023px){
+    .iguana-home-btn-auto{
+        width: 50%;
+        text-align: right;
+    }
+    .iguana-home-btn-hogar{
+        width: 50%;
+        text-align: left;
+    }
+    .iguana-destacados-cuadro{
+        width: 50%;
+    }
+
+    .iguana-telefono{
+        top: 30%;
+        width: 30%;
+        left: 55%;
+    }
+
+    .iguana-como-funciona-container {
+        width: 50%;
+        margin-top: 0;
+        margin-left: 7%;
+    }
+
+}
+
 /* Tablets en horizonal y escritorios normales
 ------------------------------------------------------------------------- */
 @media (min-width: 1024px) { 
@@ -979,12 +1007,31 @@ FIN COMMONS
     }
 
     .ic.menu {
-        display: none;
+        top: 25px;
+        z-index: 30;
     }
-    /* Main Menu for Desktop Devices  */
-    ul.main-nav {
+
+    .nav-primary{
+        right: 10%;
+    }
+
+    .main-nav {
         display: block;
         position: relative;
+        text-align: right;
+    }
+    .nav-primary .iguana-nav-izq {
+        display: inline-block;
+    }
+
+    .iguana-nav-izq{
+        float: left;
+        left: 15%;
+    }
+    .iguana-como-funciona-container {
+        width: 50%;
+        margin-top: 0;
+        margin-left: 7%;
     }
 
 }
@@ -997,6 +1044,7 @@ FIN COMMONS
         margin-bottom: 5%;
     }
 }
+
 
 /* Animation Page */
 .title-left h5 {
