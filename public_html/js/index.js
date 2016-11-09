@@ -35,7 +35,7 @@ var index = (function () {
             responsiveHeight: 0,
             scrollOverflow: true,
             slidesNavigation: true,
-            scrollBar: false,
+            scrollBar: true,
             touchSensitivity: 15,
             scrollingSpeed: 800,
             recordHistory: false,
