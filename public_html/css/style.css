@@ -592,7 +592,7 @@ FIN COMMONS
     position: absolute;
     left: 50%;
     top: 50%;
-    background-image: url("../img/preloader.gif");
+    background-image: url("../static/home/image/preloader.gif");
     background-repeat: no-repeat;
     background-position: center;
     margin: -100px 0 0 -100px;
@@ -610,7 +610,7 @@ FIN COMMONS
 }
 
 #section0{
-    background-image: url(../img/bg-header.jpg);
+    background-image: url(../static/home/image/bg-header.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -623,7 +623,7 @@ FIN COMMONS
 }
 
 .frame-img-light {
-    background-image: url("../img/bg-pros.jpg");
+    background-image: url("../static/home/image/bg-pros.jpg");
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -759,7 +759,7 @@ FIN COMMONS
 }
 
 .iguana-telefono{
-    background-image: url(../img/telefono.gif);
+    background-image: url(../static/home/image/telefono.gif);
     position: absolute;
     background-position: inherit;
     background-size: cover;
