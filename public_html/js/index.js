@@ -39,7 +39,7 @@ var index = (function () {
             autoScrolling: !isMobile(),
             responsiveWidth: 0,
             responsiveHeight: 0,
-            scrollOverflow: true,
+            scrollOverflow: !isMobile(),
             slidesNavigation: true,
             scrollBar: false,
             touchSensitivity: 15,
