@@ -627,48 +627,6 @@ FIN COMMONS
 .frame-img-light img {
     width: 100%;
 }
-
-.vertical-center {
-    min-height: 70vh; /* You might also want to use
-                          'height' property instead.
-                          
-                          Note that for percentage values of
-                          'height' or 'min-height' properties,
-                          the 'height' of the parent element
-                          should be specified explicitly.
-    
-                          In this case the parent of '.vertical-center'
-                          is the <body> element */
-
-    /* Make it a flex container */
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex; 
-
-    /* Align the bootstrap's container vertically */
-    -webkit-box-align : center;
-    -webkit-align-items : center;
-    -moz-box-align : center;
-    -ms-flex-align : center;
-    align-items : center;
-
-    /* In legacy web browsers such as Firefox 9
-       we need to specify the width of the flex container */
-    width: 100%;
-
-    /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
-       hence the bootstrap's container won't be aligned to the center anymore.
-    
-       Therefore, we should use the following declarations to get it centered again */
-    -webkit-box-pack : center;
-    -moz-box-pack : center;
-    -ms-flex-pack : center;
-    -webkit-justify-content : center;
-    justify-content : center;
-}
-
 /*================================================= 
             RESPONSIVE 
 ======================== */
@@ -806,7 +764,7 @@ FIN COMMONS
     display: inline-block;
     right: 25px;
     width: 32px;
-    height: 24px;
+    height: 30px;
     text-align: center;
     top: 0px;
     outline: none;
@@ -838,10 +796,13 @@ FIN COMMONS
 @media only screen and (max-width:768px) {
     .ic.menu {
         display: block;
+        background-color: rgba(53, 81, 173, 0.8);
     }
     .ic.menu .line {
-        background-color: #000;
+        background-color: white;
+        margin-top: 2px;
     }
+    
     .ic.menu .line {
         -webkit-transition: all 0.4s ease 0s;
         -o-transition: all 0.4s ease 0s;
@@ -936,6 +897,8 @@ FIN COMMONS
 
     ul.main-nav > li {
         display: block;
+        text-align: right;
+        padding-right: 15%;
     }
 
 }
