@@ -620,7 +620,7 @@ FIN COMMONS
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100%;
+    width: 95%;
     height: auto;
 }
 
@@ -744,9 +744,9 @@ FIN COMMONS
 
 .iguana-como-funciona-titulo{
     position: absolute;
-    top: 2%;
+    top: 6%;
     text-align: center;
-    width: 95%;
+    left: 13%;
 }
 
 .iguana-telefono{
@@ -780,7 +780,7 @@ FIN COMMONS
     width: 100%;
     padding: 0;
     margin:0;
-    top:2%;
+    padding-top: 1%;
 }
 
 .nav-primary .iguana-nav-izq{
@@ -796,8 +796,8 @@ FIN COMMONS
     padding-left: 20px;
     padding-top: 20px;
     position: relative;
-    color: #007fff;
-    font-size: 16px;
+    color: white;
+    font-size: 18px;
 }
 
 .ic {
@@ -902,7 +902,7 @@ FIN COMMONS
         right: 0px;
         top: 0px;
         width: 0px;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: #3551ad;
         height: 100%;
         overflow: auto;
         /*CSS animation applied : Slide from Right*/
@@ -916,8 +916,8 @@ FIN COMMONS
         transition-duration: 0.6s;
     }
     .ic.menu:focus ~ .main-nav {
-        width: 40%;
-        background-color: rgba(0, 0, 0, 0.7);
+        width: 60%;
+        background-color: #3551ad;
     }
     ul.main-nav > * {
         -webkit-transition-property: opacity;
@@ -933,14 +933,9 @@ FIN COMMONS
     .ic.menu:focus ~ .main-nav > * {
         opacity: 1;
     }
-    ul.main-nav > li > a:after {
-        display: none;
-    }
+
     ul.main-nav > li {
         display: block;
-    }
-    ul.main-nav > li > a {
-        font-weight: 600;
     }
 
 }
@@ -978,6 +973,42 @@ and (max-width: 1023px){
 /* Tablets en horizonal y escritorios normales
 ------------------------------------------------------------------------- */
 @media (min-width: 1024px) { 
+    .iguana-como-funciona-titulo{
+        top: 10%;
+        left: 38%;
+    }
+
+    h1.wow.fadeInDown.text-center{
+        letter-spacing: 17px;
+        font-size: 40px;
+    }
+
+    h4.wow.fadeInDown.text-center{
+        letter-spacing: 10px;
+        font-size: 20px;
+    }
+
+    h2 {
+        letter-spacing: 5px;
+    }
+
+    h5 {
+        letter-spacing: 3px;
+        font-size: 17px;
+        font-weight: 400;
+        padding-top: 15px;
+    }
+
+    #section3 h2{
+        padding-top: 6%;
+    }
+
+    p {
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
+
     .iguana-home-btn-auto{
         width: 50%;
         text-align: right;
@@ -1003,7 +1034,7 @@ and (max-width: 1023px){
     }
 
     .nav-primary{
-        right: 10%;
+        padding-right: 10%;
     }
 
     .main-nav {
@@ -1017,7 +1048,6 @@ and (max-width: 1023px){
 
     .iguana-nav-izq{
         float: left;
-        left: 15%;
     }
     .iguana-como-funciona-container {
         width: 50%;

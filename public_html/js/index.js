@@ -36,10 +36,10 @@ var index = (function () {
             anchors: ['primera', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos'],
             verticalCentered: true,
             css3: isMobile(),
-            autoScrolling: !isMobile(),
+            autoScrolling: true,
             responsiveWidth: 0,
             responsiveHeight: 0,
-            scrollOverflow: !isMobile(),
+            scrollOverflow: true,
             slidesNavigation: true,
             scrollBar: false,
             touchSensitivity: 15,
@@ -53,14 +53,13 @@ var index = (function () {
             },
             onLeave: function (index, nextIndex, direction) {
                 if (index === 1 && nextIndex === 2) {
-                    $('#section0 .wow').css('opacity', 0.7);
-                    $('#header').css('background', '#ff4081');
-                    $('#header').css('opacity', '0.2');
+                    $('.nav-primary').css('background', '#3551ad');
                 }
                 if (index === 2 && nextIndex === 1) {
-                    $('#section0 .wow').css('opacity', 1);
-                    $('#header').css('background', 'transparent');
-                    $('#header').css('opacity', '1');
+                    $('.nav-primary').css('background', 'transparent');
+                }
+                if (index === 3 || index === 4) {
+                    $('.nav-primary').css('background', '#3551ad');
                 }
             },
             afterRender: function () {
