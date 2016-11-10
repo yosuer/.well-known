@@ -1,6 +1,4 @@
-@import url(icons/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css);
-@import url(icons/fonts/pe-icon-7-stroke/css/helper.css);
-@import url(icons/font-awesome.min.css);
+@import url(font-awesome.min.css);
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
@@ -603,10 +601,6 @@ FIN COMMONS
 /* PROPIOS IGUANA */
 .iguana-inicio-space{
     margin-bottom: 20%;
-}
-
-.iguana-icon {
-    font-size: 20px;
 }
 
 #section0{
