@@ -36,7 +36,7 @@ var index = (function () {
             anchors: ['primera', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos'],
             verticalCentered: true,
             css3: isMobile(),
-            autoScrolling: true,
+            autoScrolling: !isMobile(),
             responsiveWidth: 0,
             responsiveHeight: 0,
             scrollOverflow: true,
