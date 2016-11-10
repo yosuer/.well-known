@@ -15,12 +15,19 @@ var index = (function () {
         }
     }
 
-    function initPreloader() {
-        $(window).on("load", function () {
-            $("#status").fadeOut();
-            $("#preloader").delay(350).fadeOut('slow');
-        });
+    function initComponents() {
         new WOW().init();
+    }
+
+    function bindArrowsSliders() {
+        $('.nav-fillpath .next').on('click', function (e) {
+            e.preventDefault();
+            $.fn.fullpage.moveSlideRight();
+        });
+        $('.nav-fillpath .prev').on('click', function (e) {
+            e.preventDefault();
+            $.fn.fullpage.moveSlideLeft();
+        });
     }
 
     function initFullPage() {
@@ -28,7 +35,6 @@ var index = (function () {
         var configFullPage = {
             anchors: ['primera', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos'],
             verticalCentered: true,
-            menu: '#menu-primary',
             css3: isMobile(),
             autoScrolling: true,
             responsiveWidth: 0,
@@ -41,11 +47,9 @@ var index = (function () {
             recordHistory: false,
             onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
                 $(".iguana-telefono-contenido").fadeOut(300, function () {
-                    $(".iguana-telefono-contenido").attr("src", "img/paso" + nextSlideIndex + ".gif");
+                    $(".iguana-telefono-contenido").attr("src", "static/home/image/paso" + nextSlideIndex + ".gif");
                     $(".iguana-telefono-contenido").fadeIn(200);
                 });
-                console.log('anchorLink: ' + anchorLink + ', index: ' + index + ', slideIndex: ' + slideIndex +
-                        ', direction: ' + direction + ', nextSlideIndex: ' + nextSlideIndex);
             },
             onLeave: function (index, nextIndex, direction) {
                 if (index === 1 && nextIndex === 2) {
@@ -60,14 +64,9 @@ var index = (function () {
                 }
             },
             afterRender: function () {
-                $('.nav-fillpath .next').on('click', function (e) {
-                    e.preventDefault();
-                    $.fn.fullpage.moveSlideRight();
-                });
-                $('.nav-fillpath .prev').on('click', function (e) {
-                    e.preventDefault();
-                    $.fn.fullpage.moveSlideLeft();
-                });
+                $("#status").fadeOut();
+                $("#preloader").delay(350).fadeOut('slow');
+                bindArrowsSliders();
             }
         };
 
@@ -75,7 +74,7 @@ var index = (function () {
     }
 
     function init() {
-        initPreloader();
+        initComponents();
         initFullPage();
     }
 
