@@ -525,7 +525,7 @@ FIN COMMONS
     color: #fff;
 }
 
-.call-action-rosa-btn, .call-action-rosa-btn:focus, .call-action-rosa-btn:active {
+.iguana-button, .iguana-button:focus, .iguana-button:active {
     font-family: "Open Sans",sans-serif;
     font-weight: 400;
     text-transform: uppercase;
@@ -552,7 +552,7 @@ FIN COMMONS
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,1.75);
 }
 
-.call-action-rosa-btn:hover {
+.iguana-button:hover {
     background-color: #ff4081;
     border: 2px solid #ff4081;
     color: #FFFFFF;
@@ -799,7 +799,7 @@ FIN COMMONS
         background-color: white;
         margin-top: 2px;
     }
-    
+
     .ic.menu .line {
         -webkit-transition: all 0.4s ease 0s;
         -o-transition: all 0.4s ease 0s;
@@ -818,8 +818,8 @@ FIN COMMONS
     .ic.menu:focus .line:nth-child(1) {
         transform: translateY(15px);
         opacity: 0;
-        
-        
+
+
     }
     .ic.menu:focus .line:nth-child(2) {
         -webkit-transform: rotate(45deg);

@@ -17,12 +17,12 @@ var index = (function () {
 
     function initComponents() {
         new WOW().init();
-        
-        $('.ic.menu').on('click', function (){
-            $('.ic.close').css('z-index','300');
+
+        $('.ic.menu').on('click', function () {
+            $('.ic.close').css('z-index', '300');
         });
-        $('.ic.close').on('click', function (){
-            $('.ic.close').css('z-index','20');
+        $('.ic.close').on('click', function () {
+            $('.ic.close').css('z-index', '20');
         });
     }
 
@@ -40,7 +40,7 @@ var index = (function () {
     function initFullPage() {
 
         var configFullPage = {
-            anchors: ['primera', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos'],
+            anchors: ['home', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos'],
             verticalCentered: true,
             css3: isMobile(),
             autoScrolling: true,
@@ -72,7 +72,7 @@ var index = (function () {
                 bindArrowsSliders();
             },
             afterLoad: function (anchorLink, index) {
-                if (index === 2 || index === 3 || index === 4) {
+                if (index === 2 || index === 3 || index === 4 || index === 5) {
                     $('.nav-primary').css('background', '#3551ad');
                 }
             }
