@@ -848,8 +848,8 @@ and (max-width: 767px){
 /* Icon Scroll¨*/
 .mouse {
     position: absolute;
-    bottom: 10%;
-    right: 49%;
+    bottom: 8%;
+    left: 45%;
     z-index: 500;
     -webkit-animation: vertical 3s ease infinite;
     animation: vertical 3s ease infinite;
@@ -922,6 +922,10 @@ and (max-width: 767px){
 
 .iguana-como-funciona-container {
     margin-top: 80%;
+}
+
+.iguana-home-container {
+    margin-top: 20%;
 }
 
 /*
@@ -1071,7 +1075,7 @@ and (max-width: 767px){
         transition-duration: 0.6s;
     }
     .ic.menu:focus ~ .main-nav {
-        width: 50%;
+        width: 56%;
         background-color: #3551ad;
     }
     ul.main-nav > * {
@@ -1102,6 +1106,13 @@ and (max-width: 767px){
   ------------------------------------------------------------------------- */
 @media (min-width: 480px) 
 and (max-width: 1023px){
+    .iguana-home-container {
+        margin-top: 10%;
+    }
+    .mouse {
+        bottom: 8%;
+        left: 48%;
+    }
     .iguana-titulo-seccion{
         margin-top: 5%;
     }
@@ -1119,9 +1130,9 @@ and (max-width: 1023px){
 
     .iguana-telefono-card{
         background-color: transparent;
-        top: 30%;
+        top: 35%;
         width: 30%;
-        left: 55%;
+        left: 53%;
     }
     .iguana-telefono{
         margin: 0;
@@ -1136,12 +1147,20 @@ and (max-width: 1023px){
     .nav-fillpath {
         display: block;
     }
+    .ic.menu:focus ~ .main-nav {
+        width: 35%;
+    }
 
 }
 
 /* Tablets en horizonal y escritorios normales
 ------------------------------------------------------------------------- */
 @media (min-width: 1024px) { 
+
+    .mouse {
+        bottom: 8%;
+        left: 49%;
+    }
     .iguana-como-funciona-titulo{
         top: 10%;
         left: 38%;
