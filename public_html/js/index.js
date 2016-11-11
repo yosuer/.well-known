@@ -17,6 +17,13 @@ var index = (function () {
 
     function initComponents() {
         new WOW().init();
+        
+        $('.ic.menu').on('click', function (){
+            $('.ic.close').css('z-index','300');
+        });
+        $('.ic.close').on('click', function (){
+            $('.ic.close').css('z-index','20');
+        });
     }
 
     function bindArrowsSliders() {
@@ -58,14 +65,16 @@ var index = (function () {
                 if (index === 2 && nextIndex === 1) {
                     $('.nav-primary').css('background', 'transparent');
                 }
-                if (index === 3 || index === 4) {
-                    $('.nav-primary').css('background', '#3551ad');
-                }
             },
             afterRender: function () {
                 $("#status").fadeOut();
                 $("#preloader").delay(350).fadeOut('slow');
                 bindArrowsSliders();
+            },
+            afterLoad: function (anchorLink, index) {
+                if (index === 2 || index === 3 || index === 4) {
+                    $('.nav-primary').css('background', '#3551ad');
+                }
             }
         };
 
