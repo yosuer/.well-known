@@ -1,5 +1,7 @@
 var index = (function () {
 
+    var mobile = false;
+
     function isMobile() {
         if (navigator.userAgent.match(/Android/i)
                 || navigator.userAgent.match(/webOS/i)
@@ -16,6 +18,7 @@ var index = (function () {
     }
 
     function initComponents() {
+        mobile = isMobile();
         new WOW().init();
 
         $('.ic.menu').on('click', function () {
@@ -41,22 +44,26 @@ var index = (function () {
 
         var configFullPage = {
             anchors: ['home', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos'],
-            verticalCentered: true,
-            css3: isMobile(),
+            verticalCentered: false,
+            css3: mobile,
             autoScrolling: true,
             responsiveWidth: 0,
             responsiveHeight: 0,
             scrollOverflow: true,
-            slidesNavigation: true,
+            slidesNavigation: false,
+            navigationPosition: 'right',
+            navigation: true,
             scrollBar: false,
             touchSensitivity: 15,
             scrollingSpeed: 800,
             recordHistory: false,
             onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
-                $(".iguana-telefono-contenido").fadeOut(300, function () {
-                    $(".iguana-telefono-contenido").attr("src", "static/home/image/paso" + nextSlideIndex + ".gif");
-                    $(".iguana-telefono-contenido").fadeIn(200);
-                });
+                if (!mobile) {
+                    $(".iguana-telefono-contenido").fadeOut(300, function () {
+                        $(".iguana-telefono-contenido").attr("src", "static/home/image/paso" + nextSlideIndex + ".gif");
+                        $(".iguana-telefono-contenido").fadeIn(200);
+                    });
+                }
             },
             onLeave: function (index, nextIndex, direction) {
                 if (index === 1 && nextIndex === 2) {
@@ -70,6 +77,10 @@ var index = (function () {
                 $("#status").fadeOut();
                 $("#preloader").delay(350).fadeOut('slow');
                 bindArrowsSliders();
+                if (mobile) {
+                    $(".iguana-telefono-contenido").attr("src", "static/home/image/pasosCelular.gif");
+                }
+
             },
             afterLoad: function (anchorLink, index) {
                 if (index === 2 || index === 3 || index === 4 || index === 5) {

@@ -100,7 +100,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 
 a, p a {
-    color: #696969;
+    color: #ccc;
     cursor: pointer;
     text-decoration: none;
     transition: color 0.2s ease-in-out 0s;
@@ -445,6 +445,187 @@ FIN COMMONS
 */
 
 
+/*
+************************************************************
+ARROW
+************************************************************
+*/
+
+.nav-fillpath a {
+    width: 60px;
+    height: 60px;
+}
+
+.nav-fillpath .icon-wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-fillpath a::before,
+.nav-fillpath a::after,
+.nav-fillpath .icon-wrap::before,
+.nav-fillpath .icon-wrap::after {
+    position: absolute;
+    left: 50%;
+    width: 3px;
+    height: 50%;
+    background: #566475;
+    content: '';
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.nav-fillpath .icon-wrap::before,
+.nav-fillpath .icon-wrap::after {
+    z-index: 100;
+    height: 0;
+    background: #fff;
+    -webkit-transition: height 0.3s, -webkit-transform 0.3s;
+    transition: height 0.3s, transform 0.3s;
+}
+
+.nav-fillpath a::before,
+.nav-fillpath .icon-wrap::before {
+    top: 50%;
+    -webkit-transform: translateX(-50%) rotate(-135deg);
+    transform: translateX(-50%) rotate(-135deg);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+}
+
+.nav-fillpath a.next::before,
+.nav-fillpath a.next .icon-wrap::before {
+    -webkit-transform: translateX(-50%) rotate(135deg);
+    transform: translateX(-50%) rotate(135deg);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+}
+
+.nav-fillpath a::after,
+.nav-fillpath .icon-wrap::after {
+    top: 50%;
+    -webkit-transform: translateX(-50%) rotate(-45deg);
+    transform: translateX(-50%) rotate(-45deg);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.nav-fillpath a.next::after,
+.nav-fillpath a.next .icon-wrap::after {
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+}
+
+.nav-fillpath a.prev h3 {
+    left: 100%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.nav-fillpath a.next h3 {
+    right: 100%;
+    text-align: right;
+    -webkit-transform: translateY(-50%) translateX(50%);
+    transform: translateY(-50%) translateX(50%);
+}
+
+.nav-fillpath a:hover .icon-wrap::before,
+.nav-fillpath a:hover .icon-wrap::after {
+    height: 50%;
+}
+
+.nav-fillpath a:hover::before,
+.nav-fillpath a:hover .icon-wrap::before {
+    -webkit-transform: translateX(-50%) rotate(-125deg);
+    transform: translateX(-50%) rotate(-125deg);
+}
+
+.nav-fillpath a.next:hover::before,
+.nav-fillpath a.next:hover .icon-wrap::before {
+    -webkit-transform: translateX(-50%) rotate(125deg);
+    transform: translateX(-50%) rotate(125deg);
+}
+
+.nav-fillpath a:hover::after,
+.nav-fillpath a:hover .icon-wrap::after {
+    -webkit-transform: translateX(-50%) rotate(-55deg);
+    transform: translateX(-50%) rotate(-55deg);
+}
+
+.nav-fillpath a.next:hover::after,
+.nav-fillpath a.next:hover .icon-wrap::after {
+    -webkit-transform: translateX(-50%) rotate(55deg);
+    transform: translateX(-50%) rotate(55deg);
+}
+
+.nav-fillpath a:hover h3 {
+    opacity: 1;
+    -webkit-transform: translateY(-50%) translateX(0);
+    transform: translateY(-50%) translateX(0);
+}
+
+nav a {
+    position: absolute;
+    top: 59%;
+    display: block;
+    outline: none;
+    text-align: left;
+    z-index: 1000;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+nav a.prev {
+    display: none;
+    left: -5%;
+}
+
+nav a.next {
+    display: none;
+    right: -5%;
+}
+
+@media (min-width: 480px)
+and (max-width: 767px){
+    nav a.prev {
+        display: block;
+        left: -4%;
+    }
+
+    nav a.next {
+        display: block;
+        right: 0;
+    }
+    .nav-fillpath a {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (min-width: 768px) { 
+    nav a.prev {
+        display: block;
+        left: 0;
+    }
+
+    nav a.next {
+        display: block;
+        right: 0;
+    }
+
+    .nav-fillpath a {
+        width: 100px;
+        height: 100px;
+    }
+
+}
+
 
 /* Buttons */
 
@@ -530,10 +711,10 @@ FIN COMMONS
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
-    background: #ff4081;
+    background: #FFFFFF;
     display: inline-block;
-    color: #fff;
-    border: 2px solid #FF357C;
+    color: #333;
+    border: 2px solid #FFFFFF;
     border-radius: 40px;
     text-decoration: none;
     -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
@@ -549,10 +730,16 @@ FIN COMMONS
 
     -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,1.75);
+    box-shadow: 0 10px 20px -5px #aaa;
+    transition: all 0.4s;
 }
 
 .iguana-button:hover {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px 2px rgba(0, 0, 0, 0.2);
     background-color: #ff4081;
     border: 2px solid #ff4081;
     color: #FFFFFF;
@@ -654,6 +841,7 @@ FIN COMMONS
     border: 1px #ccc solid;
     margin-top: 5px;
     margin-bottom: 5px;
+    margin-left: -20px;
 }
 
 
@@ -700,24 +888,32 @@ FIN COMMONS
     text-align: center;
 }
 
-.iguana-como-funciona-titulo{
-    position: absolute;
-    top: 6%;
+.iguana-titulo-seccion{
+    margin-top: 10%;
     text-align: center;
-    left: 13%;
+}
+
+.iguana-como-funciona-texto{
+    text-align: center;
+}
+
+.iguana-telefono-card {
+    position: absolute;
+    background-color: #ccc;
+    z-index: 10;
+    top: 21%;
+    left: 8%;
+    width: 83%;
 }
 
 .iguana-telefono{
     background-image: url(../static/home/image/telefono.gif);
-    position: absolute;
     background-position: inherit;
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: 0;
-    top: 20%;
-    left: 15%;
-    width: 70%;
+    margin: 10% 12% 1px 12%;
 }
+
 .iguana-telefono-contenido{
     margin: auto;
     width: 87%;
@@ -725,7 +921,7 @@ FIN COMMONS
 }
 
 .iguana-como-funciona-container {
-    margin-top: 85%;
+    margin-top: 80%;
 }
 
 /*
@@ -752,11 +948,11 @@ FIN COMMONS
 
 .main-nav > li > a {
     display: inline;
-    padding-left: 20px;
+    padding-left: 15px;
     padding-top: 20px;
     position: relative;
     color: white;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .ic {
@@ -818,9 +1014,8 @@ FIN COMMONS
     .ic.menu:focus .line:nth-child(1) {
         transform: translateY(15px);
         opacity: 0;
-
-
     }
+
     .ic.menu:focus .line:nth-child(2) {
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
@@ -876,7 +1071,7 @@ FIN COMMONS
         transition-duration: 0.6s;
     }
     .ic.menu:focus ~ .main-nav {
-        width: 60%;
+        width: 50%;
         background-color: #3551ad;
     }
     ul.main-nav > * {
@@ -898,6 +1093,7 @@ FIN COMMONS
         display: block;
         text-align: right;
         padding-right: 15%;
+        padding-top: 8%;
     }
 
 }
@@ -906,6 +1102,9 @@ FIN COMMONS
   ------------------------------------------------------------------------- */
 @media (min-width: 480px) 
 and (max-width: 1023px){
+    .iguana-titulo-seccion{
+        margin-top: 5%;
+    }
     .iguana-home-btn-auto{
         width: 50%;
         text-align: right;
@@ -918,16 +1117,24 @@ and (max-width: 1023px){
         width: 50%;
     }
 
-    .iguana-telefono{
+    .iguana-telefono-card{
+        background-color: transparent;
         top: 30%;
         width: 30%;
         left: 55%;
+    }
+    .iguana-telefono{
+        margin: 0;
     }
 
     .iguana-como-funciona-container {
         width: 50%;
         margin-top: 0;
         margin-left: 7%;
+    }
+
+    .nav-fillpath {
+        display: block;
     }
 
 }
@@ -961,10 +1168,6 @@ and (max-width: 1023px){
         padding-top: 15px;
     }
 
-    #section3 h2{
-        padding-top: 6%;
-    }
-
     p {
         font-size: 16px;
         letter-spacing: 1px;
@@ -980,14 +1183,19 @@ and (max-width: 1023px){
         text-align: left;
     }
 
-    .iguana-telefono{
-        top: 25%;
-        width: 30%;
+    .iguana-telefono-card{
+        background-color: transparent;
+        top: 34%;
+        width: 36%;
         left: 53%;
     }
 
-    .iguana-como-funciona-container {
-        margin-top: 0;
+    .iguana-telefono{
+        margin: 0;
+    }
+
+    .iguana-titulo-seccion{
+        margin-top: 5%;
     }
 
     .ic.menu {
@@ -1013,8 +1221,12 @@ and (max-width: 1023px){
     }
     .iguana-como-funciona-container {
         width: 50%;
-        margin-top: 0;
-        margin-left: 7%;
+        margin-top: 17%;
+        margin-left: 4%;
+    }
+
+    .nav-fillpath {
+        display: block;
     }
 
 }
@@ -1164,177 +1376,3 @@ and (max-width: 1023px){
 }
 
 
-/*
-************************************************************
-ARROW
-************************************************************
-*/
-
-.nav-fillpath a {
-    width: 60px;
-    height: 60px;
-}
-
-.nav-fillpath .icon-wrap {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.nav-fillpath a::before,
-.nav-fillpath a::after,
-.nav-fillpath .icon-wrap::before,
-.nav-fillpath .icon-wrap::after {
-    position: absolute;
-    left: 50%;
-    width: 3px;
-    height: 50%;
-    background: #566475;
-    content: '';
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.nav-fillpath .icon-wrap::before,
-.nav-fillpath .icon-wrap::after {
-    z-index: 100;
-    height: 0;
-    background: #fff;
-    -webkit-transition: height 0.3s, -webkit-transform 0.3s;
-    transition: height 0.3s, transform 0.3s;
-}
-
-.nav-fillpath a::before,
-.nav-fillpath .icon-wrap::before {
-    top: 50%;
-    -webkit-transform: translateX(-50%) rotate(-135deg);
-    transform: translateX(-50%) rotate(-135deg);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-}
-
-.nav-fillpath a.next::before,
-.nav-fillpath a.next .icon-wrap::before {
-    -webkit-transform: translateX(-50%) rotate(135deg);
-    transform: translateX(-50%) rotate(135deg);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-}
-
-.nav-fillpath a::after,
-.nav-fillpath .icon-wrap::after {
-    top: 50%;
-    -webkit-transform: translateX(-50%) rotate(-45deg);
-    transform: translateX(-50%) rotate(-45deg);
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-}
-
-.nav-fillpath a.next::after,
-.nav-fillpath a.next .icon-wrap::after {
-    -webkit-transform: translateX(-50%) rotate(45deg);
-    transform: translateX(-50%) rotate(45deg);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-}
-
-.nav-fillpath a.prev h3 {
-    left: 100%;
-    -webkit-transform: translateY(-50%) translateX(-50%);
-    transform: translateY(-50%) translateX(-50%);
-}
-
-.nav-fillpath a.next h3 {
-    right: 100%;
-    text-align: right;
-    -webkit-transform: translateY(-50%) translateX(50%);
-    transform: translateY(-50%) translateX(50%);
-}
-
-.nav-fillpath a:hover .icon-wrap::before,
-.nav-fillpath a:hover .icon-wrap::after {
-    height: 50%;
-}
-
-.nav-fillpath a:hover::before,
-.nav-fillpath a:hover .icon-wrap::before {
-    -webkit-transform: translateX(-50%) rotate(-125deg);
-    transform: translateX(-50%) rotate(-125deg);
-}
-
-.nav-fillpath a.next:hover::before,
-.nav-fillpath a.next:hover .icon-wrap::before {
-    -webkit-transform: translateX(-50%) rotate(125deg);
-    transform: translateX(-50%) rotate(125deg);
-}
-
-.nav-fillpath a:hover::after,
-.nav-fillpath a:hover .icon-wrap::after {
-    -webkit-transform: translateX(-50%) rotate(-55deg);
-    transform: translateX(-50%) rotate(-55deg);
-}
-
-.nav-fillpath a.next:hover::after,
-.nav-fillpath a.next:hover .icon-wrap::after {
-    -webkit-transform: translateX(-50%) rotate(55deg);
-    transform: translateX(-50%) rotate(55deg);
-}
-
-.nav-fillpath a:hover h3 {
-    opacity: 1;
-    -webkit-transform: translateY(-50%) translateX(0);
-    transform: translateY(-50%) translateX(0);
-}
-
-nav a {
-    position: absolute;
-    top: 50%;
-    display: block;
-    outline: none;
-    text-align: left;
-    z-index: 1000;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-nav a.prev {
-    left: -5%;
-}
-
-nav a.next {
-    right: -5%;
-}
-
-@media (min-width: 375px)
-and (max-width: 768px){
-    nav a.prev {
-        left: -9%;
-    }
-
-    nav a.next {
-        right: -9%;
-    }
-    .nav-fillpath a {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media (min-width: 768px) { 
-    nav a.prev {
-        left: 0;
-    }
-
-    nav a.next {
-        right: 0;
-    }
-
-    .nav-fillpath a {
-        width: 100px;
-        height: 100px;
-    }
-
-}

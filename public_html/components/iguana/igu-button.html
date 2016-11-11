@@ -1,0 +1,64 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="igu-button">
+    <style>
+        .iguana-button, .iguana-button:focus, .iguana-button:active {
+            font-family: "Open Sans",sans-serif;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: #ff4081;
+            display: inline-block;
+            color: #fff;
+            border: 2px solid #FF357C;
+            border-radius: 40px;
+            text-decoration: none;
+            -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+            transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+            position: relative;
+            font-weight: 100;
+            margin-top: 4%;
+            padding: 0.7em 1.25em;
+            text-align: center;
+            overflow: hidden;
+            z-index: 0;
+            cursor: pointer;
+
+            -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,1.75);
+        }
+
+        .iguana-button:hover {
+            background-color: #ff4081;
+            border: 2px solid #ff4081;
+            color: #FFFFFF;
+        }
+
+        .hoverable:hover > .anim {
+            -moz-animation: anim-out 0.75s;
+            -webkit-animation: anim-out 0.75s;
+            animation: anim-out 0.75s;
+        }
+
+        .hoverable:hover > .anim:after {
+            -moz-animation: anim-out-pseudo 0.75s;
+            -webkit-animation: anim-out-pseudo 0.75s;
+            animation: anim-out-pseudo 0.75s;
+        }
+    </style>
+    <template>
+        <div class="iguana-button hoverable">
+            <div class="anim"></div><span><content></content></span>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            is: 'igu-button',
+            properties: {
+                theme: String,
+                color: String
+            }
+        });
+    </script>
+</dom-module>
