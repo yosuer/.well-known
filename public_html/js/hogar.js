@@ -1,4 +1,4 @@
-var index = (function () {
+var hogar = (function () {
 
     function initComponents() {
         new WOW().init();
@@ -34,5 +34,5 @@ var index = (function () {
 })();
 
 $(document).ready((function () {
-    index.init();
+    hogar.init();
 }));

@@ -60,7 +60,7 @@ var index = (function () {
             onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
                 if (!mobile) {
                     $(".iguana-telefono-contenido").fadeOut(300, function () {
-                        $(".iguana-telefono-contenido").attr("src", "static/home/image/paso" + nextSlideIndex + ".gif");
+                        $(".iguana-telefono-contenido").attr("src", "static/home/image/home/paso" + nextSlideIndex + ".gif");
                         $(".iguana-telefono-contenido").fadeIn(200);
                     });
                 }
