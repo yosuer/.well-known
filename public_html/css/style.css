@@ -92,14 +92,14 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-    color: white;
+    color: #000;
     cursor: pointer;
     text-decoration: none;
     transition: color 0.2s ease-in-out 0s;
 }
 
 a, p a {
-    color: #ff4081;
+    color: #ccc;
     cursor: pointer;
     text-decoration: none;
     transition: color 0.2s ease-in-out 0s;
@@ -825,7 +825,7 @@ and (max-width: 767px){
     position: absolute;
     left: 50%;
     top: 50%;
-    background-image: url("../static/home/image/home/preloader.gif");
+    background-image: url("../images/home/preloader.gif");
     background-repeat: no-repeat;
     background-position: center;
     margin: -100px 0 0 -100px;
@@ -839,7 +839,7 @@ and (max-width: 767px){
 }
 
 #section0{
-    background-image: url("../static/home/image/home/bg-header.jpg");
+    background-image: url("../images/home/bg-header.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -856,7 +856,7 @@ and (max-width: 767px){
 }
 
 .frame-img-light {
-    background-image: url("../static/home/image/home/bg-pros.jpg");
+    background-image: url("../images/home/bg-pros.jpg");
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -962,7 +962,7 @@ and (max-width: 767px){
 }
 
 .iguana-telefono{
-    background-image: url("../static/home/image/home/telefono.gif");
+    background-image: url("../images/home/telefono.gif");
     background-position: inherit;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1503,7 +1503,7 @@ and (max-width: 1023px){
 /* HOME */
 .iguana-home-section0 {
     /* The image used */
-    background-image: url("../static/home/image/hogar/home-header.jpg");
+    background-image: url("../images/hogar/home-header.jpg");
 
     /* Set a specific height */
     min-height: 500px;
@@ -1524,7 +1524,7 @@ and (max-width: 1023px){
 }
 
 .iguana-autos-section0 {
-    background-image: url("../static/home/image/auto/bg-header_autos.jpg");
+    background-image: url("../images/auto/bg-header_autos.jpg");
     min-height: 450px;
     background-attachment: fixed;
     background-position: center;
@@ -1555,7 +1555,7 @@ and (max-width: 1023px){
 
 .iguana-autos-section2 {
     margin-top: 4%;
-    background-image: url("../static/home/image/auto/bg-parallax.jpg");
+    background-image: url("../images/auto/bg-parallax.jpg");
     min-height: 160px;
     background-attachment: fixed;
     background-position: center;
@@ -1981,4 +1981,3 @@ a, a:hover, a:focus, .btn, btn:hover, button, button:hover{
     -o-transition:all 250ms ease-in-out 0s;
     transition:all 250ms ease-in-out 0s;
 }
-
