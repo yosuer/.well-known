@@ -206,7 +206,7 @@
 
 .shadow-box .team-box h5 {
     text-align: center;
-    padding: 28px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
 }
 
 .shadow-box .team-box h6 {
@@ -218,15 +218,6 @@
 .shadow-box .team-box img {
     padding: 0;
     width: 100%;
-}
-
-.shadow-box .team-box p {
-    text-align: center;
-    padding: 38px 40px 56px;
-    margin-right: 40px;
-    margin-left: 40px;
-    border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;
 }
 
 @media (max-width: 992px) {

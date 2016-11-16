@@ -825,7 +825,7 @@ and (max-width: 767px){
     position: absolute;
     left: 50%;
     top: 50%;
-    background-image: url("../images/home/preloader.gif");
+    background-image: url("../static/restyling/images/home/preloader.gif");
     background-repeat: no-repeat;
     background-position: center;
     margin: -100px 0 0 -100px;
@@ -839,7 +839,7 @@ and (max-width: 767px){
 }
 
 #section0{
-    background-image: url("../images/home/bg-header.jpg");
+    background-image: url("../static/restyling/images/home/bg-header.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -856,7 +856,7 @@ and (max-width: 767px){
 }
 
 .frame-img-light {
-    background-image: url("../images/home/bg-pros.jpg");
+    background-image: url("../static/restyling/images/home/bg-pros.jpg");
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -962,7 +962,7 @@ and (max-width: 767px){
 }
 
 .iguana-telefono{
-    background-image: url("../images/home/telefono.gif");
+    background-image: url("../static/restyling/images/home/telefono.gif");
     background-position: inherit;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1499,16 +1499,54 @@ and (max-width: 1023px){
 }
 
 
+/* CATEGORIES */
+.iguana-category-section0 {
+    background-image: url("../static/restyling/images/categories/climatizacion/bg-header.jpg");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.iguana-category-section0 h1{
+    color: white;
+}
+
+.iguana-category-section0 h4{
+    color: white;
+}
+
+.iguana-categories-cuadro{
+    text-align: center;
+}
+
+.iguana-categories-cuadro h3{
+    padding: 0px;
+    margin: 0px;
+    text-transform: uppercase;
+    line-height: normal;
+    font-size: medium;
+    letter-spacing: 1px;
+}
+.iguana-categories-cuadro h5{
+    padding: 0px;
+    margin: 10px 0;
+    line-height: normal;
+    font-size: medium;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.iguana-category-section0-title{
+    margin-top: 10%;
+}
+
 
 /* HOME */
 .iguana-home-section0 {
-    /* The image used */
-    background-image: url("../images/hogar/home-header.jpg");
-
-    /* Set a specific height */
+    background-image: url("../static/restyling/images/hogar/home-header.jpg");
     min-height: 500px;
-
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -1524,7 +1562,7 @@ and (max-width: 1023px){
 }
 
 .iguana-autos-section0 {
-    background-image: url("../images/auto/bg-header_autos.jpg");
+    background-image: url("../static/restyling/images/auto/bg-header_autos.jpg");
     min-height: 450px;
     background-attachment: fixed;
     background-position: center;
@@ -1555,7 +1593,7 @@ and (max-width: 1023px){
 
 .iguana-autos-section2 {
     margin-top: 4%;
-    background-image: url("../images/auto/bg-parallax.jpg");
+    background-image: url("../static/restyling/images/auto/bg-parallax.jpg");
     min-height: 160px;
     background-attachment: fixed;
     background-position: center;
@@ -1573,9 +1611,6 @@ and (max-width: 1023px){
 
 
 /* FOOTER */
-
-
-
 
 /* Tab */
 .nav-tabs > li > a {
