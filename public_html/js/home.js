@@ -43,7 +43,7 @@ var index = (function () {
     function initFullPage() {
 
         var configFullPage = {
-            anchors: ['home', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos'],
+            anchors: ['home', 'bienvenidos', 'comofunciona', 'destacados', 'tequeremos', 'foot'],
             verticalCentered: false,
             css3: mobile,
             autoScrolling: true,
@@ -60,7 +60,7 @@ var index = (function () {
             onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
                 if (!mobile) {
                     $(".iguana-telefono-contenido").fadeOut(300, function () {
-                        $(".iguana-telefono-contenido").attr("src", "static/home/image/home/paso" + nextSlideIndex + ".gif");
+                        $(".iguana-telefono-contenido").attr("src", "static/restyling/images/home/paso" + nextSlideIndex + ".gif");
                         $(".iguana-telefono-contenido").fadeIn(200);
                     });
                 }
@@ -78,13 +78,17 @@ var index = (function () {
                 $("#preloader").delay(350).fadeOut('slow');
                 bindArrowsSliders();
                 if (mobile) {
-                    $(".iguana-telefono-contenido").attr("src", "static/home/image/pasosCelular.gif");
+                    $(".iguana-telefono-contenido").attr("src", "static/restyling/images/pasosCelular.gif");
                 }
 
             },
             afterLoad: function (anchorLink, index) {
+            	if (index === 1 || index === 6){
+            		$('#fp-nav').hide();
+            	}
                 if (index === 2 || index === 3 || index === 4 || index === 5) {
                     $('.nav-primary').css('background', '#3551ad');
+                    $('#fp-nav').show();
                 }
             }
         };

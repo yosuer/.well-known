@@ -62,9 +62,30 @@
                     <div class="col-xs-12">
                         <h4  class="wow fadeInDown text-center" data-wow-delay="0.3s">Simple, rápido y seguro</h4>
                     </div>
+                    <div class="col-xs-12">
+                        <form>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-xs-8 col-xs-offset-2 col-md-3 col-md-offset-4 iguana-autos-section0-left">
+                                        <select class="form-control" id="selectInstallHome">
+                                            <c:forEach var="installHome" items="${installationsHome}">
+                                                <option value="${z:installationCategoryLink(installHome)}">${installHome.name}</option>
+                                            </c:forEach>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4 iguana-autos-section0-right">
+                                        <div class="call-action-azul-btn hoverable">
+                                            <div class="anim"></div><span id="iguana-house-btn-selectInstallHome">Seleccionar</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
+
 
 
         <div class="iguana-home-section1">
@@ -80,230 +101,23 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/climatizacion.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Climatización</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
+                    <c:forEach var="installHome" items="${installationsHome}">
+                        <div class="col-xs-12 col-sm-6 col-md-4 shadow-box iguana-destacados-cuadro">
+                            <div class="team-box">
+                                <img src="${z:installationCategoryPicture(installHome)}" class="img-responsive" alt="${installHome.name}">
+                                <div class="text-left">
+                                    <h5>${installHome.name}</h5>
+                                    <h6>A partir de $200</h6>
+                                </div>
+                                <div class="list-inline text-center">
+                                    <div class="call-action-line-rosa-btn hoverable">
+                                        <div class="anim"></div>
+                                        <a href="${z:installationCategoryLink(installHome)}">Contratar</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/gasistas.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Gas</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/pintura.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Pintura</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/electricistas_matriculados.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Electricistas matriculados</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span >Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/electricistas_soluciones.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Electricidad</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/plomeria.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Plomería</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/alfombras.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Alfombras y tapizados</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/pisos.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Pisos y revestimiento</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/albanileria.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Albañilería y durlock</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/pc.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Service de computación</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/pequenas_soluciones.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Pequeñas soluciones</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/linea_blanco.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Línea blanca</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/cocina.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Cocinas, hornos</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/calefones_termotanques.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Calefón y termotanque</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/banos.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Artefactos de baño</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 shadow-box iguana-destacados-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/soporte_tv.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Soporte de TV</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
+                    </c:forEach>
                 </div>
             </div>
         </div>
@@ -316,7 +130,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-4">
                         <div class="call-action-rosa-btn hoverable">
-                            <div class="anim"></div><span>Pedí presupuesto</span>
+                            <div class="anim"></div><a href="/">Pedí presupuesto</a>
                         </div> 
                     </div>
                 </div>
