@@ -78,7 +78,7 @@ var index = (function () {
                 $("#preloader").delay(350).fadeOut('slow');
                 bindArrowsSliders();
                 if (mobile) {
-                    $(".iguana-telefono-contenido").attr("src", "static/restyling/images/pasosCelular.gif");
+                    $(".iguana-telefono-contenido").attr("src", "static/restyling/images/home/pasosCelular.gif");
                 }
 
             },

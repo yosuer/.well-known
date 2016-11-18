@@ -4,6 +4,7 @@
 COMMONS
 ************************************************************
 */
+
 html {
     width: 100%;
     height: 100%;
@@ -1155,12 +1156,24 @@ and (max-width: 767px){
     }
 }
 
-.iguana-hogar-section1 .iguana-destacados-cuadro {
+.iguana-destacados-cuadro {
+    margin-bottom: 6%;
+}
+
+.iguana-categories-cuadro {
     margin-bottom: 6%;
 }
 
 .iguana-hogar-section1 .iguana-destacados-cuadro .team-box img{
     height: 218px;
+}
+
+#section3 .iguana-destacados-cuadro .team-box img{
+    height: 193px;
+}
+
+.iguana-categorie-section2 .iguana-categories-cuadro .team-box img {
+    height: 218px
 }
 
 /* Móviles en horizontal o tablets en vertical
@@ -1360,7 +1373,7 @@ and (max-width: 1023px){
     }
     .iguana-como-funciona-container {
         width: 50%;
-        margin-top: 17%;
+        margin-top: 10%;
         margin-left: 4%;
     }
 
@@ -1368,22 +1381,45 @@ and (max-width: 1023px){
         display: block;
     }
 
-    .iguana-hogar-section1 .iguana-destacados-cuadro {
+    .iguana-destacados-cuadro {
         margin-bottom: 3%;
     }
 
-    .iguana-hogar-section1 .iguana-destacados-cuadro .team-box {
-        height: 490px;
-    }
-
-    .iguana-hogar-section1 .iguana-destacados-cuadro .team-box h6{
-        margin-bottom: 6%;
+    .iguana-categories-cuadro {
+        margin-bottom: 2%;
     }
 
     .iguana-hogar-section1 .iguana-destacados-cuadro .team-box img{
         height: 320px;
     }
 
+    #section3 .iguana-destacados-cuadro .team-box img{
+        height: 268px;
+    }
+
+    .iguana-categorie-section2 .iguana-destacados-cuadro .team-box img{
+        height: 234px;
+    }
+
+    #section3 .iguana-destacados-cuadro .team-box{
+        height: 393px;
+    }
+
+    .iguana-hogar-section1 .iguana-destacados-cuadro .team-box {
+        height: 490px;
+    }
+
+    .iguana-categorie-section2 .iguana-categories-cuadro .team-box {
+        height: 435px
+    }
+
+    .iguana-categorie-section2 .iguana-categories-cuadro .team-box img {
+        height: 234px
+    }
+    
+    .main-footer .container{
+    	width: 87%;
+    }
 }
 
 /* Escritorios muy anchos
@@ -1431,6 +1467,7 @@ and (max-width: 1023px){
 }
 
 .title-left span {
+	font-size: 16px;
     font-family: 'Open Sans', serif;
     font-style: italic;
     font-weight: 400;
@@ -1597,7 +1634,7 @@ and (max-width: 1023px){
 }
 
 .iguana-autos-section0 {
-    background-image: url("../images/auto/bg-header_autos.jpg");
+    background-image: url("../static/restyling/images/auto/bg-header_autos.jpg");
     min-height: 450px;
     background-attachment: fixed;
     background-position: center;
@@ -1628,7 +1665,7 @@ and (max-width: 1023px){
 
 .iguana-autos-section2 {
     margin-top: 4%;
-    background-image: url("../images/auto/bg-parallax.jpg");
+    background-image: url("../static/restyling/images/auto/bg-parallax.jpg");
     min-height: 160px;
     background-attachment: fixed;
     background-position: center;
@@ -1642,7 +1679,7 @@ and (max-width: 1023px){
 }
 
 .iguana-landing-section0 {
-    min-height: 550px;
+    min-height: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -1799,7 +1836,6 @@ form.dark .form-control{
 .widget{
     padding: 20px;
     background-color: #fff;
-    margin-bottom: 40px;
 }
 .widget.widget-last{
     margin-bottom: 0px;
@@ -1807,7 +1843,6 @@ form.dark .form-control{
 .widget.no-box{
     padding: 0;
     background-color: transparent;
-    margin-bottom: 40px;
     box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; -ms-box-shadow: none; -o-box-shadow: none;
 }
 .widget.subscribe p{
@@ -1819,6 +1854,10 @@ form.dark .form-control{
 .widget-title {
     margin-bottom: 10px;
     color: white;
+}
+
+.widget-title:first-child {
+    margin-top: 4%;
 }
 .widget-title span {
     background: #606060 none repeat scroll 0 0;
@@ -1849,6 +1888,7 @@ form.dark .form-control{
 }
 /* Go Link Widget */
 .go-widget li a {
+	line-height: 20px;
     display: block;
     padding: 5px 0;
     position: relative;
@@ -2039,7 +2079,6 @@ footer ul{
 }
 .footer-copyright p {
     color: #969696;
-    margin: 2px 0 0;
 }
 
 .footer-top{
