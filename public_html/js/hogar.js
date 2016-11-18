@@ -1,5 +1,17 @@
 var hogar = (function () {
 
+    function resize(component, relation) {
+        console.log($(component).width());
+        console.log($(component).height());
+        $(component).css('height', $(component).width() * relation);
+
+    }
+
+    function resizeHeightComponents() {
+        $('.iguana-hogar-section1 .team-box').each(function (i, obj) {
+        });
+    }
+
     function initComponents() {
         new WOW().init();
 
@@ -26,6 +38,7 @@ var hogar = (function () {
 
     function init() {
         initComponents();
+        resizeHeightComponents();
     }
 
     return {
