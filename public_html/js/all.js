@@ -18,6 +18,31 @@ var index = (function () {
         }
     }
 
+    function bindearOptions() {
+        $("#iguana-house-btn-selectInstallHome").on("click", function (e) {
+            window.location.href = $("#selectInstallHome").val();
+        });
+
+        $("#iguana-house-btn-selectInstallCar").on("click", function (e) {
+            window.location.href = $("#selectInstallCar").val();
+        });
+    }
+
+    function calculateTeamBox() {
+        var biggestHeight = "0";
+        var imgHeight = "0";
+        $(".team-box").each(function () {
+            if ($(this).height() > biggestHeight) {
+                biggestHeight = $(this).height();
+            }
+            if ($(this).find("img").height() > imgHeight) {
+                imgHeight = $(this).find("img").height();
+            }
+        });
+        $(".team-box").height(biggestHeight + 50);
+        $(".team-box img").height(imgHeight);
+    }
+
     function initComponents() {
         mobile = isMobile();
         cdnUrl = $('#cdnUrl').val();
@@ -30,6 +55,18 @@ var index = (function () {
         $('.ic.close').on('click', function () {
             $('.ic.close').css('z-index', '20');
         });
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > $("[class*=section1]").offset().top) {
+                $('.nav-primary').css('background', '#3551ad');
+            }
+            if ($(window).scrollTop() < $('[class*=section1]').offset().top) {
+                $('.nav-primary').css('background', 'transparent');
+            }
+        });
+        
+            
+        calculateTeamBox();
     }
 
     function bindArrowsSliders() {
@@ -114,24 +151,4 @@ var index = (function () {
 
 $(document).ready((function () {
     index.init();
-
-    var biggestHeight = "0";
-    var imgHeight = "0";
-    $(".team-box").each(function () {
-        if ($(this).height() > biggestHeight) {
-            biggestHeight = $(this).height();
-        }
-        if ($(this).find("img").height() > imgHeight) {
-            imgHeight = $(this).find("img").height();
-        }
-    });
-    $(".team-box").height(biggestHeight + 50);
-    $(".team-box img").height(imgHeight);
-
-    $('#mobile-nav-trigger').on('click', function () {
-        $('#mobile-nav-trigger').toggleClass('active');
-
-        $('#mobile-nav').toggleClass('mobile-nav-open');
-        $('.master-wrap').addClass('nav-opened');
-    });
 }));

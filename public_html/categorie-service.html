@@ -80,133 +80,65 @@
         <section class="iguana-categorie-section2">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-3 shadow-box iguana-categories-cuadro">
-                        <div class="team-box">
-                            <h3>instalacion aire acondicionado split</h3>
-                            <img src="static/restyling/images/categories/climatizacion/bg-header.jpg" class="img-responsive" alt="">
-                            <h5><i class="fa fa-check" aria-hidden="true"></i> frio-calor (A/C)</h5>
-                            <h5><i class="fa fa-check" aria-hidden="true"></i> menos de 3.000 frigorias</h5>
-                            <h6><i class="fa fa-credit-card" aria-hidden="true"></i> desde $850.00</h6>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
+                    <div class="container">
+                        <div class="col-xs-12 col-sm-3 shadow-box iguana-categories-cuadro" >
+                            <div class="team-box">
+                                <h3>${product.installationType.name}</h3>
+                                <img src="static/restyling/images/categories/climatizacion/4.diagnosticoyreparacion_de_aire_acondicionado.jpg" class="img-responsive" alt="">
+                                <h5><i class="fa fa-check" aria-hidden="true"></i> frio-calor (A/C)</h5>
+                                <h6><i class="fa fa-credit-card" aria-hidden="true"></i> <spring:message code="p.customer.job.installation.products.priceFrom" /> <sv:formatCurrency value="${product.minPriceInCents / 100}"></sv:formatCurrency></h6>
+                                <div class="list-inline text-center">
+                                    <a href="${z:installationTypeLink(category, product.installationType)}">
+                                        <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
+                                            <div class="anim"></div><span>Contratar</span>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 shadow-box iguana-categories-cuadro">
-                        <div class="team-box">
-                            <h3>instalacion aire acondicionado split</h3>
-                            <img src="static/restyling/images/categories/climatizacion/bg-header.jpg" class="img-responsive" alt="">
-                            <h5><i class="fa fa-check" aria-hidden="true"></i> frio-calor (A/C)</h5>
-                            <h5><i class="fa fa-check" aria-hidden="true"></i> menos de 3.000 frigorias</h5>
-                            <h6><i class="fa fa-credit-card" aria-hidden="true"></i> desde $850.00</h6>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div>
+                        <div class="col-xs-12 col-sm-3 shadow-box iguana-categories-cuadro" >
+                            <div class="team-box">
+                                <h3>${product.installationType.name}</h3>
+                                <img src="static/restyling/images/hogar/albanileria.jpg" class="img-responsive" alt="">
+                                <h5><i class="fa fa-check" aria-hidden="true"></i> frio-calor (A/C)</h5>
+                                <h6><i class="fa fa-credit-card" aria-hidden="true"></i> a partir de 200$</h6>
+                                <a href="${z:installationTypeLink(category, product.installationType)}">
+                                    <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
+                                        <div class="anim"></div><span>Contratar</span>
+                                    </div>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 shadow-box iguana-categories-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/pintura.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Pintura</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 shadow-box iguana-categories-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/electricistas_matriculados.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Electricistas matriculados</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span >Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 shadow-box iguana-categories-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/ims.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Electricidad</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 shadow-box iguana-categories-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/plomeria.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Plomería</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 shadow-box iguana-categories-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/alfombras.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Alfombras y tapizados</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 shadow-box iguana-categories-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/pisos.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Pisos y revestimiento</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 shadow-box iguana-categories-cuadro">
-                        <div class="team-box">
-                            <img src="static/restyling/images/hogar/albanileria.jpg" class="img-responsive" alt="">
-                            <div class="text-left">
-                                <h5>Albañilería y durlock</h5>
-                                <h6>desde $850.00</h6>
-                            </div>
-                            <div class="list-inline text-center">
-                                <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
-                                    <div class="anim"></div><span>Contratar</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
 
+                        <div class="col-xs-12 col-sm-3 shadow-box iguana-categories-cuadro" >
+                            <div class="team-box">
+                                <h3>${product.installationType.name}</h3>
+                                <img src="${z:installationTypePicture(product.installationType)}" class="img-responsive" alt="">
+                                <h5><i class="fa fa-check" aria-hidden="true"></i> frio-calor (A/C)</h5>
+                                <h6><i class="fa fa-credit-card" aria-hidden="true"></i> <spring:message code="p.customer.job.installation.products.priceFrom" /> <sv:formatCurrency value="${product.minPriceInCents / 100}"></sv:formatCurrency></h6>
+                                <div class="list-inline text-center">
+                                    <a href="${z:installationTypeLink(category, product.installationType)}">
+                                        <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
+                                            <div class="anim"></div><span>Contratar</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 shadow-box iguana-categories-cuadro" >
+                            <div class="team-box">
+                                <h3>${product.installationType.name}</h3>
+                                <img src="static/restyling/images/categories/climatizacion/instalacion_de_panel_calefactor.jpg" class="img-responsive" alt="">
+                                <h5><i class="fa fa-check" aria-hidden="true"></i> frio-calor (A/C)</h5>
+                                <h6><i class="fa fa-credit-card" aria-hidden="true"></i> <spring:message code="p.customer.job.installation.products.priceFrom" /> <sv:formatCurrency value="${product.minPriceInCents / 100}"></sv:formatCurrency></h6>
+                                <a href="${z:installationTypeLink(category, product.installationType)}">
+                                    <div class="call-action-line-rosa-btn hoverable fadeInUp" data-wow-delay="0.2s">
+                                        <div class="anim"></div><span>Contratar</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
