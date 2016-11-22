@@ -3,6 +3,7 @@
 COMMONS
 ************************************************************
 */
+
 html {
     width: 100%;
     height: 100%;
@@ -1170,6 +1171,14 @@ and (max-width: 767px){
     height: 218px;
 }
 
+#section3 .iguana-destacados-cuadro .team-box img{
+    height: 193px;
+}
+
+.iguana-categorie-section2 .iguana-categories-cuadro .team-box img {
+    height: 218px
+}
+
 .iguana-hogar-section1 .iguana-destacados-cuadro .team-box{
     height: 340px;
 }
@@ -1534,6 +1543,7 @@ and (max-width: 1023px){
 }
 
 .title-left span {
+	font-size: 16px;
     font-family: 'Open Sans', serif;
     font-style: italic;
     font-weight: 400;

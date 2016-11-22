@@ -79,8 +79,7 @@ var index = (function () {
             afterRender: function () {
                 bindArrowsSliders();
                 if (mobile) {
-                    console.log(cdnUrl);
-                    $(".iguana-telefono-contenido").attr("src", cdnUrl + "static/restyling/images/home/pasosCelular.gif");
+                    $(".iguana-telefono-contenido").attr("src", "static/restyling/images/home/pasosCelular.gif");
                 }
 
             },
