@@ -214,12 +214,3 @@
     padding: 0;
     width: 100%;
 }
-
-@media (max-width: 992px) {
-    .shadow-box .team-box {
-        margin-bottom: 100px;
-    }
-    .shadow-box .team-box:last-child {
-        margin-bottom: 0;
-    }
-}

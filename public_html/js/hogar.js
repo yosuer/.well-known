@@ -1,44 +1,40 @@
 var hogar = (function () {
 
-    function resize(component, relation) {
-        console.log($(component).width());
-        console.log($(component).height());
-        $(component).css('height', $(component).width() * relation);
-
-    }
-
-    function resizeHeightComponents() {
-        $('.iguana-hogar-section1 .team-box').each(function (i, obj) {
-        });
-    }
-
     function initComponents() {
         new WOW().init();
-
-        $('.ic.menu').on('click', function () {
-            $('.ic.close').css('z-index', '300');
-        });
-        $('.ic.close').on('click', function () {
-            $('.ic.close').css('z-index', '20');
-        });
 
         $(window).scroll(function () {
 
             if ($(window).scrollTop() > $("[class*=section1]").offset().top) {
-                console.log('color');
                 $('.nav-primary').css('background', '#3551ad');
             }
 
             if ($(window).scrollTop() < $('[class*=section1]').offset().top) {
-                console.log('transparent');
                 $('.nav-primary').css('background', 'transparent');
             }
         });
+
+        $("#iguana-house-btn-selectInstallHome").on("click", function (e) {
+            window.location.href = $("#selectInstallHome").val();
+        });
+
+        var biggestHeight = "0";
+        var imgHeight = "0";
+        $(".team-box").each(function () {
+            if ($(this).height() > biggestHeight) {
+                biggestHeight = $(this).height();
+            }
+            if ($(this).find("img").height() > imgHeight) {
+                imgHeight = $(this).find("img").height();
+            }
+        });
+        $(".team-box").height(biggestHeight + 50);
+        $(".team-box img").height(imgHeight);
+
     }
 
     function init() {
         initComponents();
-        resizeHeightComponents();
     }
 
     return {

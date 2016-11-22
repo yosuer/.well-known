@@ -4,6 +4,8 @@ COMMONS
 ************************************************************
 */
 
+
+
 html {
     width: 100%;
     height: 100%;
@@ -43,7 +45,7 @@ h2 {
 }
 
 h3 {
-	font-weight: 600;
+    font-weight: 600;
     letter-spacing: 5px;
 }
 
@@ -652,16 +654,16 @@ and (max-width: 767px){
     -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
     transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
     position: absolute;
+    margin: 0 auto;
+    bottom: 10px;
+    left: 0;
+    right: 0;
     font-weight: 100;
     padding: 5px 10px;
-    text-align: center;  
+    text-align: center;
     overflow: hidden;
     z-index: 0;
     cursor: pointer;
-    bottom: 4%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
     width: 50%;
 }
 
@@ -1161,14 +1163,11 @@ and (max-width: 767px){
 
 .iguana-destacados-cuadro {
     margin-bottom: 6%;
+    text-align: center;
 }
 
 .iguana-categories-cuadro {
     margin-bottom: 6%;
-}
-
-.iguana-hogar-section1 .iguana-destacados-cuadro .team-box img{
-    height: 218px;
 }
 
 #section3 .iguana-destacados-cuadro .team-box img{
@@ -1179,16 +1178,12 @@ and (max-width: 767px){
     height: 218px
 }
 
-.iguana-hogar-section1 .iguana-destacados-cuadro .team-box{
-    height: 340px;
-}
-
 #section3 .iguana-destacados-cuadro .team-box img{
     height: 193px;
 }
 
 #section3 .iguana-destacados-cuadro .team-box {
-	height: 302px;
+    height: 302px;
 }
 
 .iguana-categorie-section2 .iguana-categories-cuadro .team-box img {
@@ -1204,8 +1199,8 @@ and (max-width: 767px){
 }
 
 #section5 {
-	padding-top: 12%;
-	background: #252525;
+    padding-top: 12%;
+    background: #252525;
 }
 
 
@@ -1213,10 +1208,10 @@ and (max-width: 767px){
   ------------------------------------------------------------------------- */
 @media (min-width: 480px) 
 and (max-width: 1023px){
-	
-	.iguana-como-funciona-texto{
-    	line-height: 1;
-	}
+
+    .iguana-como-funciona-texto{
+        line-height: 1;
+    }
 
     .iguana-autos-section2 {
         padding-top: 30px;
@@ -1280,43 +1275,35 @@ and (max-width: 1023px){
         margin-bottom: 4%;
     }
 
-    .iguana-hogar-section1 .iguana-destacados-cuadro .team-box {
+    .iguana-autos-section1 .iguana-destacados-cuadro .team-box {
         height: 356px;
     }
 
-    .iguana-hogar-section1 .iguana-destacados-cuadro .team-box img {
+    .iguana-autos-section1 .iguana-destacados-cuadro .team-box img {
         height: 218px;
     }
-
-	.iguana-autos-section1 .iguana-destacados-cuadro .team-box {
-    	height: 356px;
-	}
-	
-	.iguana-autos-section1 .iguana-destacados-cuadro .team-box img {
-    	height: 218px;
-	}
 
 }
 
 /* Tablets en horizonal y escritorios normales
 ------------------------------------------------------------------------- */
 @media (min-width: 1024px) { 
-	
-	.iguana-autos-section1 .heading-line-center {
-		margin-bottom: 2%;
-	}
-	
-	.iguana-como-funciona-texto {
-    	line-height: 4;
-	}
-	
-	.iguana-como-funciona-texto p{
-    	line-height: 40px;
-	}
-	
-	.iguana-como-funciona-texto em{
-    	font-size: 20px;
-	}
+
+    .iguana-autos-section1 .heading-line-center {
+        margin-bottom: 2%;
+    }
+
+    .iguana-como-funciona-texto {
+        line-height: 4;
+    }
+
+    .iguana-como-funciona-texto p{
+        line-height: 40px;
+    }
+
+    .iguana-como-funciona-texto em{
+        font-size: 20px;
+    }
 
     .main-nav .fa-home, .main-nav .fa-car, .main-nav .fa-th {
         display: none;
@@ -1462,14 +1449,6 @@ and (max-width: 1023px){
         height: 410px;
     }
 
-    .iguana-hogar-section1 .iguana-destacados-cuadro .team-box {
-        height: 490px;
-    }
-    
-   	.iguana-hogar-section1 .iguana-destacados-cuadro .team-box img{
-        height: 320px;
-    }
-
     .iguana-categorie-section2 .iguana-categories-cuadro .team-box {
         height: 435px
     }
@@ -1477,25 +1456,24 @@ and (max-width: 1023px){
     .iguana-categorie-section2 .iguana-categories-cuadro .team-box img {
         height: 234px
     }
-    
-   	.iguana-autos-section1 .iguana-destacados-cuadro .team-box {
-    	height: 490px;
-	}
-	
-	.iguana-autos-section1 .iguana-destacados-cuadro .team-box img{
+
+    .iguana-autos-section1 .iguana-destacados-cuadro .team-box {
+        height: 490px;
+    }
+
+    .iguana-autos-section1 .iguana-destacados-cuadro .team-box img{
         height: 320px;
     }
-	
-    
+
+
     .main-footer .container{
-    	width: 87%;
+        width: 87%;
     }
-    
+
     .call-action-line-rosa-btn, .call-action-line-rosa-btn:focus, .call-action-line-rosa-btn:active {
-    	width: 156px;
-    	bottom: 5%;
+        width: 156px;
     }
-    
+
 }
 
 /* Escritorios muy anchos
@@ -1543,7 +1521,7 @@ and (max-width: 1023px){
 }
 
 .title-left span {
-	font-size: 16px;
+    font-size: 16px;
     font-family: 'Open Sans', serif;
     font-style: italic;
     font-weight: 400;
@@ -1964,7 +1942,7 @@ form.dark .form-control{
 }
 /* Go Link Widget */
 .go-widget li a {
-	line-height: 20px;
+    line-height: 20px;
     display: block;
     padding: 5px 0;
     position: relative;
