@@ -1036,21 +1036,20 @@ and (max-width: 767px){
 .mobile-nav-wrap ul li i{
     float: right;
     color: #fff;
+    font-size: 15px;
+    margin: 7% 6% 0 0;
 }
 
 .menu a {
     font-family: 'Open Sans',sans-serif;
-    margin:0px;
-    margin-bottom: 2px;
     color: white;
     display: block;
     font-size: 12px;
     letter-spacing: 3px;
     font-weight: 200;
-    line-height: 32px;
     text-transform: uppercase;
     font-weight: 400;
-    padding: 10px;
+    padding: 5%;
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -ms-transition: all .4s ease-in-out;
@@ -1075,7 +1074,6 @@ and (max-width: 767px){
     display: block;
     text-align: center;
     cursor: pointer;
-    font-size: 14px;
     color: #ffffff;
     width: 40px;
     height: 40px;
@@ -1092,86 +1090,40 @@ and (max-width: 767px){
 .main-header{
     background: transparent;
     position: fixed;
-    top: 0px;
-    left: 0px;
     z-index: 999;
     width: 100%;
-    -webkit-transition: all .8s ease-in-out .3s;
-    -moz-transition: all .8s ease-in-out .3s;
-    -ms-transition: all .8s ease-in-out .3s;
-    -o-transition: all .8s ease-in-out .3s;
-    transition: all .8s ease-in-out .3s;
+    padding: 0 5% 0 0;
+    margin: 0;
+    text-align: right;
+    overflow: hidden;
 }
-.main-header .logo{
-    margin: 30px 0px;
-    -webkit-transition: all .8s ease-in-out .3s;
-    -moz-transition: all .8s ease-in-out .3s;
-    -ms-transition: all .8s ease-in-out .3s;
-    -o-transition: all .8s ease-in-out .3s;
-    transition: all .8s ease-in-out .3s;
+
+nav > ul {
+    margin-top: 15px;
 }
-.main-header ul{
-    margin-bottom: 0px;
-}
-.main-menu-item{
+
+nav > ul > li{
     display: inline-block;
     list-style: none;
     padding: 0;	
     margin: 0px 10px;
-    -webkit-transition: all .8s ease-in-out .3s;
-    -moz-transition: all .8s ease-in-out .3s;
-    -ms-transition: all .8s ease-in-out .3s;
-    -o-transition: all .8s ease-in-out .3s;
-    transition: all .8s ease-in-out .3s;
-}
-.main-menu-item i{
-    -webkit-transition: all .8s ease-in-out .3s;
-    -moz-transition: all .8s ease-in-out .3s;
-    -ms-transition: all .8s ease-in-out .3s;
-    -o-transition: all .8s ease-in-out .3s;
-    transition: all .8s ease-in-out .3s;
-}
-.main-menu-item a{
-    text-transform: uppercase;
-    font-size: 14px;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
 }
 
-@media (min-width: 3000px) {
-    .mobile-nav{
-        display: none;
-        visibility: hidden;
-    }
-    .container{
-        max-width:1100px;
-    }
+nav > ul > li > a{
+    display: inline;
+    position: relative;
+    color: white;
+    font-size: 18px;
 }
 
-/*Large Widescreen Monitors*/
-@media (max-width: 1920px) {
-    .mobile-nav{
-        display: none;
-        visibility: hidden;
-    }
+nav > ul > li > a:hover{
+    color: white;
 }
 
-/*Small Desktop and Very Small Notebook */
-@media (max-width: 960px) {
-
-    .main-header{
-        display: none;
-        visibility: hidden;
-    }
-    .mobile-nav{
-        display: block;
-        visibility: visible;
-    }
+.main-header{
+    display: none;
+    visibility: hidden;
 }
-
 
 .iguana-destacados-cuadro {
     margin-bottom: 6%;
@@ -1251,10 +1203,6 @@ and (max-width: 1023px){
         display: block;
     }
 
-    .ic.menu:focus ~ .main-nav {
-        width: 35%;
-    }
-
     .iguana-hogar-section1 .iguana-destacados-cuadro {
         margin-bottom: 4%;
     }
@@ -1287,10 +1235,6 @@ and (max-width: 1023px){
 
     .iguana-como-funciona-texto em{
         font-size: 20px;
-    }
-
-    .main-nav .fa-home, .main-nav .fa-car, .main-nav .fa-th {
-        display: none;
     }
 
     .iguana-autos-section2 .hoverable{
@@ -1381,23 +1325,14 @@ and (max-width: 1023px){
         margin-top: 5%;
     }
 
-    .ic.menu {
-        top: 25px;
-        z-index: 30;
+    .mobile-nav{
+        display: none;
+        visibility: hidden;
     }
 
-    .nav-primary{
-        padding-right: 5%;
-    }
-
-    .main-nav {
+    .main-header {
         display: block;
-        position: relative;
-        text-align: right;
-    }
-
-    .nav-primary .iguana-nav-izq {
-        display: inline-block;
+        visibility: visible
     }
 
     .iguana-nav-izq{
@@ -1405,12 +1340,9 @@ and (max-width: 1023px){
     }
 
     .iguana-nav-izq img{
-        width: 80%;
+        width: 85%;
     }
 
-    .iguana-nav-izq a {
-        padding: 0!important;
-    }
     .iguana-como-funciona-container {
         margin-top: 5%;
         margin-left: 2%;

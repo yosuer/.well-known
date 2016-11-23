@@ -23,13 +23,6 @@ var index = (function () {
         cdnUrl = $('#cdnUrl').val();
 
         new WOW().init();
-
-        $('.ic.menu').on('click', function () {
-            $('.ic.close').css('z-index', '300');
-        });
-        $('.ic.close').on('click', function () {
-            $('.ic.close').css('z-index', '20');
-        });
     }
 
     function bindArrowsSliders() {
@@ -71,10 +64,10 @@ var index = (function () {
             },
             onLeave: function (index, nextIndex, direction) {
                 if (index === 1 && nextIndex === 2) {
-                    $('.nav-primary').css('background', '#3551ad');
+                    $('.main-header').css('background', '#3551ad');
                 }
                 if (index === 2 && nextIndex === 1) {
-                    $('.nav-primary').css('background', 'transparent');
+                    $('.main-header').css('background', 'transparent');
                 }
             },
             afterRender: function () {
@@ -90,7 +83,7 @@ var index = (function () {
                     $('#fp-nav').hide();
                 }
                 if (index === 2 || index === 3 || index === 4 || index === 5) {
-                    $('.nav-primary').css('background', '#3551ad');
+                    $('.main-header').css('background', '#3551ad');
                     $('#fp-nav').show();
                 }
             }
